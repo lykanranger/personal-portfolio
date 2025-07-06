@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karun Binny ~ Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+  </head>
+
+  <body>
+
+     <!-- Loading animation -->
+
+    <div class="loading-container">
+      <button class="loading-button">
+        <span></span>
+      </button>
+    </div>
+
+     <!-- Navbar -->
+
+    <nav id="desktop-nav">
+      <a href="#">
+        <img class="logo" src="assets/logo.png">
+        </a>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#education">EDUCATION</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <img class="logo" src="assets/logo.png">
+      <div class="hamburger-menu">
+        <div class="hamburger-icon"onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">ABOUT</a></li>
+          <li><a href="#education" onclick="toggleMenu()">EDUCATION</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">SKILLS</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">PROJECTS</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">CONTACT</a></li>
+        </div>
+      </div>
+    </nav>
+
+     <!-- Profile -->
+
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpeg" alt="karun profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <p class="section_text" id="typing-text"></p>
+        <p class="section_text_p2">Pursuing MCA🧑🏽‍💻 | BCA🎓</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-1"
+            onclick="window.open('./assets/RESUME.pdf')">
+            RESUME
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            CONTACT 
+          </button>
+      </div>
+    </section>
+
+     <!-- About -->
+
+    <section id="about">
+      <section class="portfolio-section portfolio-hero-section">
+        <div class="portfolio-hero-container portfolio-hero-theme-dark">
+          <div class="portfolio-hero-inner">
+            <div class="portfolio-hero-center">
+              <h1>ABOUT ME</h1>
+              <p>KNOW MORE ABOUT MY JOURNEY</p>
+              <div class="portfolio-logo1_container">
+                <img class="portfolio-logo1" src="assets/pic.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio-section portfolio-about-section">
+        <div class="portfolio-about-container portfolio-about-theme-light">
+          <div class="portfolio-about-inner">
+            <div class="portfolio-about-center">
+              <p>"I'm Karun Binny, an MCA student with a background in BCA. I have a passion for web development, UI/UX design, and exploring emerging tech like IoT. My strengths include a quick learning attitude, strong problem-solving skills, and a creative mindset. I enjoy working in collaborative environments and aim to contribute to innovative projects that create real impact."</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+     <!-- Education -->
+
+    <section id="education">
+      <div class="education-container">
+        <h1 class="title">EDUCATION</h1>
+        <div class="cards-wrapper">
+              <!-- MCA Card -->
+              <article class="card card-mca">
+                <div class="thumb-mca"></div>
+                <div class="infos-mca">
+                  <h2 class="title-mca">MASTER'S DEGREE <span class="flag"></span></h2>
+                  <h3 class="date-mca">Mahatma Gandhi University</h3>
+                  <h3 class="seats-mca">MCA (2024 - Present)</h3>
+                  <p class="txt-mca">
+                    Pursuing MCA at Kristu Jyoti College,
+                    a 2-year professional program, learning
+                    to build software & solve real-world problems,
+                    and grow into a skilled and creative tech professional.
+                  </p>
+                </div>
+              </article>
+
+              <!-- BCA Card -->
+              <article class="card card-bca">
+                <div class="thumb-bca"></div>
+                <div class="infos-bca">
+                  <h2 class="title-bca">BACHELOR'S DEGREE <span class="flag"></span></h2>
+                  <h3 class="date-bca">Mahatma Gandhi University</h3>
+                  <h3 class="seats-bca"> BCA (2021 - 2024)</h3>
+                  <p class="txt-bca">
+                    Completed BCA from Kristu Jyoti College,
+                    learned programming, databases,and web 
+                    development through collaborative projects
+                    and hands-on learning.
+                  </p>
+                </div>
+              </article>
+
+              <!-- CSE Card -->
+              <article class="card card-cse">
+                <div class="thumb-cse"></div>
+                <div class="infos-cse">
+                  <h2 class="title-cse">HIGHER SECONDARY<span class="flag"></span></h2>
+                  <h3 class="date-cse">KERALA STATE BOARD</h3>
+                  <h3 class="seats-cse">CSE (2019 - 2021)</h3>
+                  <p class="txt-cse">
+                    Studied Computer Science at NSS HSS Karukachal,
+                    focusing on the fundamentals of coding, logic building,
+                    and computer theory, which laid my foundation in IT.
+                  </p>
+                </div>
+              </article>
+      </section>
+
+     <!-- Skills -->
+
+    <section id="skills">
+      <h1 class="title">SKILLS</h1>
+      <div class="logos">
+        <div class="logos-slide">
+          <div class="logo-popup"><img src="./logos/html.png" alt="html"><span class="popup-text">HTML</span></div>
+          <div class="logo-popup"><img src="./logos/excel.png" alt="excel"><span class="popup-text">Ms Excel</span></div>
+          <div class="logo-popup"><img src="./logos/python.png" alt="python"><span class="popup-text">Python</span></div>
+          <div class="logo-popup"><img src="./logos/java.png" alt="java"><span class="popup-text">Java</span></div>
+          <div class="logo-popup"><img src="./logos/C.png" alt="c"><span class="popup-text">C</span></div>
+          <div class="logo-popup"><img src="./logos/snapseed.png" alt="snapseed"><span class="popup-text">Snapseed</span></div>
+          <div class="logo-popup"><img src="./logos/creativecloud.png" alt="creativecloud"><span class="popup-text">Adobe Creative</span></div>
+          <div class="logo-popup"><img src="./logos/11.png" alt="11"><span class="popup-text">Windows 11</span></div>
+          <div class="logo-popup"><img src="./logos/apple.png" alt="apple"><span class="popup-text">Mac OS</span></div>
+          <div class="logo-popup"><img src="./logos/linux.png" alt="linux"><span class="popup-text">Linux</span></div>
+          <div class="logo-popup"><img src="./logos/tailwind.png" alt="tailwind"><span class="popup-text">Tailwind CSS</span></div>
+          <div class="logo-popup"><img src="./logos/adobe.png" alt="adobe"><span class="popup-text">Illustrator</span></div>
+          <div class="logo-popup"><img src="./logos/css.png" alt="css"><span class="popup-text">CSS</span></div>
+          <div class="logo-popup"><img src="./logos/pycharm.png" alt="pycharm"><span class="popup-text">PyCharm</span></div>
+          <div class="logo-popup"><img src="./logos/access.png" alt="access"><span class="popup-text">Ms Access</span></div>
+          <div class="logo-popup"><img src="./logos/word.png" alt="word"><span class="popup-text">Ms Word</span></div>
+          <div class="logo-popup"><img src="./logos/chatgpt.png" alt="chatgpt"><span class="popup-text">Chatgpt</span></div>
+          <div class="logo-popup"><img src="./logos/figma.png" alt="figma"><span class="popup-text">Figma</span></div>
+          <div class="logo-popup"><img src="./logos/photoshop.png" alt="photoshop"><span class="popup-text">Photoshop</span></div>
+          <div class="logo-popup"><img src="./logos/php.png" alt="php"><span class="popup-text">php</span></div>
+          <div class="logo-popup"><img src="./logos/microsoft.png" alt="microsoft"><span class="popup-text">Microsoft</span></div>
+          <div class="logo-popup"><img src="./logos/ai.png" alt="ai"><span class="popup-text">Ai</span></div>
+          <div class="logo-popup"><img src="./logos/ppt.png" alt="ppt"><span class="popup-text">Powerpoint</span></div>
+          <div class="logo-popup"><img src="./logos/C++.png" alt="c++"><span class="popup-text">C++</span></div>
+          <div class="logo-popup"><img src="./logos/github.png" alt="github"><span class="popup-text">Github</span></div>
+          <div class="logo-popup"><img src="./logos/js.png" alt="js"><span class="popup-text">JavaScript</span></div>
+          <div class="logo-popup"><img src="./logos/mysql.png" alt="mysql"><span class="popup-text">MySQL</span></div>
+          <div class="logo-popup"><img src="./logos/git.png" alt="git"><span class="popup-text">Git</span></div>
+          <div class="logo-popup"><img src="./logos/typescript.png" alt="typescript"><span class="popup-text">Typescript</span></div>
+          <div class="logo-popup"><img src="./logos/lightroom.png" alt="lightroom"><span class="popup-text">Lightroom</span></div>
+          <div class="logo-popup"><img src="./logos/mongodb.png" alt="mongodb"><span class="popup-text">Mongodb</span></div>
+          <div class="logo-popup"><img src="./logos/Canva.png" alt="Canva"><span class="popup-text">Canva</span></div>
+          <div class="logo-popup"><img src="./logos/office.png" alt="office"><span class="popup-text">Ms Office</span></div>
+          <div class="logo-popup"><img src="./logos/vscode.png" alt="vscode"><span class="popup-text">Visual Studio</span></div>
+          <div class="logo-popup"><img src="./logos/bootstrap.png" alt="bootstrap"><span class="popup-text">Bootstrap</span></div>
+          <div class="logo-popup"><img src="./logos/gemini.png" alt="gemini"><span class="popup-text">Gemini Ai</span></div>
+        </div>
+        <div class="logos-slide">
+          <div class="logo-popup"><img src="./logos/html.png" alt="html"><span class="popup-text">HTML</span></div>
+          <div class="logo-popup"><img src="./logos/excel.png" alt="excel"><span class="popup-text">Ms Excel</span></div>
+          <div class="logo-popup"><img src="./logos/python.png" alt="python"><span class="popup-text">Python</span></div>
+          <div class="logo-popup"><img src="./logos/java.png" alt="java"><span class="popup-text">Java</span></div>
+          <div class="logo-popup"><img src="./logos/C.png" alt="c"><span class="popup-text">C</span></div>
+          <div class="logo-popup"><img src="./logos/snapseed.png" alt="snapseed"><span class="popup-text">Snapseed</span></div>
+          <div class="logo-popup"><img src="./logos/creativecloud.png" alt="creativecloud"><span class="popup-text">Adobe Creative</span></div>
+          <div class="logo-popup"><img src="./logos/11.png" alt="11"><span class="popup-text">Windows 11</span></div>
+          <div class="logo-popup"><img src="./logos/apple.png" alt="apple"><span class="popup-text">Mac OS</span></div>
+          <div class="logo-popup"><img src="./logos/linux.png" alt="linux"><span class="popup-text">Linux</span></div>
+          <div class="logo-popup"><img src="./logos/tailwind.png" alt="tailwind"><span class="popup-text">Tailwind CSS</span></div>
+          <div class="logo-popup"><img src="./logos/adobe.png" alt="adobe"><span class="popup-text">Illustrator</span></div>
+          <div class="logo-popup"><img src="./logos/css.png" alt="css"><span class="popup-text">CSS</span></div>
+          <div class="logo-popup"><img src="./logos/pycharm.png" alt="pycharm"><span class="popup-text">PyCharm</span></div>
+          <div class="logo-popup"><img src="./logos/access.png" alt="access"><span class="popup-text">Ms Access</span></div>
+          <div class="logo-popup"><img src="./logos/word.png" alt="word"><span class="popup-text">Ms Word</span></div>
+          <div class="logo-popup"><img src="./logos/chatgpt.png" alt="chatgpt"><span class="popup-text">Chatgpt</span></div>
+          <div class="logo-popup"><img src="./logos/figma.png" alt="figma"><span class="popup-text">Figma</span></div>
+          <div class="logo-popup"><img src="./logos/photoshop.png" alt="photoshop"><span class="popup-text">Photoshop</span></div>
+          <div class="logo-popup"><img src="./logos/php.png" alt="php"><span class="popup-text">php</span></div>
+          <div class="logo-popup"><img src="./logos/microsoft.png" alt="microsoft"><span class="popup-text">Microsoft</span></div>
+          <div class="logo-popup"><img src="./logos/ai.png" alt="ai"><span class="popup-text">Ai</span></div>
+          <div class="logo-popup"><img src="./logos/ppt.png" alt="ppt"><span class="popup-text">Powerpoint</span></div>
+          <div class="logo-popup"><img src="./logos/C++.png" alt="c++"><span class="popup-text">C++</span></div>
+          <div class="logo-popup"><img src="./logos/github.png" alt="github"><span class="popup-text">Github</span></div>
+          <div class="logo-popup"><img src="./logos/js.png" alt="js"><span class="popup-text">JavaScript</span></div>
+          <div class="logo-popup"><img src="./logos/mysql.png" alt="mysql"><span class="popup-text">MySQL</span></div>
+          <div class="logo-popup"><img src="./logos/git.png" alt="git"><span class="popup-text">Git</span></div>
+          <div class="logo-popup"><img src="./logos/typescript.png" alt="typescript"><span class="popup-text">Typescript</span></div>
+          <div class="logo-popup"><img src="./logos/lightroom.png" alt="lightroom"><span class="popup-text">Lightroom</span></div>
+          <div class="logo-popup"><img src="./logos/mongodb.png" alt="mongodb"><span class="popup-text">Mongodb</span></div>
+          <div class="logo-popup"><img src="./logos/Canva.png" alt="Canva"><span class="popup-text">Canva</span></div>
+          <div class="logo-popup"><img src="./logos/office.png" alt="office"><span class="popup-text">Ms Office</span></div>
+          <div class="logo-popup"><img src="./logos/vscode.png" alt="vscode"><span class="popup-text">Visual Studio</span></div>
+          <div class="logo-popup"><img src="./logos/bootstrap.png" alt="bootstrap"><span class="popup-text">Bootstrap</span></div>
+          <div class="logo-popup"><img src="./logos/gemini.png" alt="gemini"><span class="popup-text">Gemini Ai</span></div>
+        </div>
+      </div>
+    </section>
+    <p class="subtitle">*** Tools & technologies that I have worked with ***</p>
+
+     <!-- Certificates -->
+
+    <section class="cert-section">
+            <h1 class="title">CERTIFICATIONS</h1>
+      <div class="cert-container">
+        
+        <a href="https://drive.google.com/file/d/1L_54PilU98AS0fgYz9qms6XeX-UfPlFJ/view?usp=sharing">
+          <div class="cert-card">
+            <div>
+              <p class="cert-heading">Python Programming</p>
+              <p>Provided By</p>
+              <p>CodeSignal</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://drive.google.com/file/d/19kej7_p6su0hY9Iwer9hOGzXR3H1GGrv/view?usp=sharing" target="_blank" class="about">
+          <div class="cert-card">
+            <div>
+              <p class="cert-heading">PM - Essentials</p>
+              <p>Provided By</p>
+              <p>Infosys Springboard</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://drive.google.com/file/d/1QpT2Sghd_6OcqoUcAuUM_QqSbJK3tDGG/view?usp=sharing" target="_blank" class="about">
+          <div class="cert-card">
+            <div>
+              <p class="cert-heading">HTML and CSS</p>
+              <p>Provided By</p>
+              <p>Udemy</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://drive.google.com/file/d/1aEPekMcpW1JXdQixUkhfDIGpsF6pTJgz/view?usp=sharing" target="_blank" class="about">
+          <div class="cert-card">
+            <div>
+              <p class="cert-heading">Project Management</p>
+              <p>Provided By</p>
+              <p>Electronic Arts</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://drive.google.com/file/d/1H4Q9YMzLNyCJ0rJy-R2L3aIQZYt0DZ57/view?usp=sharing" target="_blank" class="about">
+          <div class="cert-card">
+            <div>
+              <p class="cert-heading">Structured Query</p>
+              <p>Provided By</p>
+              <p>OneRoadMap</p>
+            </div>
+          </div>
+        </a>
+        <button class="more-button" onclick="window.open('https://www.linkedin.com/in/karun-binny/details/certifications/', '_blank')">
+          <span>CLICK ME</span>
+        </button>
+      </div>
+    </section>
+    <p class="subtitle">*** To see more of my certifications on linkedin***</p>
+
+     <!-- Projects -->
+
+    <section id="projects"> 
+      <h1 class="title">PROJECTS</h1>
+      <section class="project-hero-section">
+        <div class="project-card-grid">
+          <a class="project-card" href="https://lykanranger.github.io/Calculator-Project-js/" target="_blank">
+            <div class="project-card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
+            <div class="project-card__content">
+              <p class="project-card__category">Web Development</p>
+              <h3 class="project-card__heading">Calculator App</h3>
+            </div>
+          </a>
+          <a class="project-card" href="https://lykanranger.github.io/weather/" target="_blank">
+            <div class="project-card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+            <div class="project-card__content">
+              <p class="project-card__category">Mobile App Development</p>
+              <h3 class="project-card__heading">Weather App</h3>
+            </div>
+          </a>
+          <a class="project-card" href="https://lykanranger.github.io/clock/" target="_blank">
+            <div class="project-card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+            <div class="project-card__content">
+              <p class="project-card__category">API Integration Project</p>
+              <h3 class="project-card__heading">Dynamic Clock</h3>
+            </div>
+          </a>
+          <a class="project-card" href="https://lykanranger.github.io/to-do-list/" target="_blank">
+            <div class="project-card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+            <div class="project-card__content">
+              <p class="project-card__category">Web Development</p>
+              <h3 class="project-card__heading">Minimalistic To-Do List</h3>
+            </div>
+          </a>
+        </div>
+      </section>
+        <p class="view-on-github">
+          <a class="animated-button" href="https://github.com/lykanranger" target="_blank">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"></path>
+            </svg>
+            <span class="text">Visit GitHub</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"></path>
+            </svg>
+          </a>
+        </p>
+    </section>
+
+     <!-- Contact -->
+    
+    <section id="contact">
+      <h1 class="know-more-title">KNOW MORE</h1>
+      <div class="container">
+        <div class="screen">
+          <div class="screen-header">
+            <div class="screen-header-left">
+              <div class="screen-header-button close"></div>
+              <div class="screen-header-button maximize"></div>
+              <div class="screen-header-button minimize"></div>
+            </div>
+          </div>
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <span>CONTACT</span>
+                <span>ME</span>
+              </div>
+              <div class="app-contact">
+                <a href="tel:+9179944938">
+                  <i class="fa fa-phone"></i>+91 7994 4938
+                </a><br><br>
+                <a href="mailto:karunbinny867@gmail.com">
+                  <i class="fa fa-envelope"></i>karunbinny867@gmail.com
+                </a><br><br>
+                <a href="https://maps.app.goo.gl/Do844ynxW6GUBg4W7">
+                  <i class="fa fa-map-marker"></i> Kottayam Kerala India
+                </a>
+              </div>
+            </div>
+            <div class="screen-body-item">
+              <form class="app-form" action="https://formspree.io/f/myzjawqw" method="post">
+                <div class="app-form-group">
+                  <input class="app-form-control" type="text" name="name" placeholder="NAME">
+                </div>
+                <div class="app-form-group">
+                  <input class="app-form-control" type="email" name="email" placeholder="EMAIL">
+                </div>
+                <div class="app-form-group">
+                  <input class="app-form-control" type="text" name="contact" placeholder="CONTACT NO">
+                </div>
+                <div class="app-form-group message">
+                  <textarea class="app-form-control" name="message" placeholder="MESSAGE"></textarea>
+                </div>
+                <div class="app-form-group buttons">
+                  <button class="app-form-button" type="button" onclick="history.back()">CANCEL</button>
+                  <button class="app-form-button" type="submit">SEND</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
+
+    <footer id="footer-rings">
+      <article id="footer-lights">
+        <ul class="footer-socials">
+          <li><a href="https://www.facebook.com/karun.binny.9" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.twitter.com/karun_binny/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/karunbinny" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://www.instagram.com/karunbinny/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://github.com/lykanranger" target="_blank"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://wa.me/7994444938" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+
+        </ul>
+        <div class="lighting-effect">
+          <div id="one"></div>
+          <div id="two"></div>
+          <div id="three"></div>
+          <div id="four"></div>
+          <div id="five"></div>
+        </div>
+      </article>
+        <p class="footer-credits">
+          Made with <span class="heart-beat">❤️</span> by Karun <br> &copy; 2025. All Rights Reserved
+        </p>
+    </footer>      
+    <script src="script.js"></script>
+  </body>
+</html>

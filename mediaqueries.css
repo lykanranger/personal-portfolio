@@ -1,0 +1,100 @@
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 85vh;
+    margin-bottom: 6rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+
+  #education,
+  .section-container{
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .txt {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  #profile {
+    height: 80vh;
+    margin-bottom: 0;
+    margin-top: 3rem;
+  }
+  article {
+    font-size: 1rem;
+  }
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+  .section-container{
+    height: fit-content;
+  }
+  .footer-credits {
+    font-size: 0.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;  
+  }
+
+  .project-card:last-child {
+    margin-bottom: 5rem;
+  }
+
+  #projects .title {
+  margin-bottom: 5rem;
+  font-size: 3rem;
+}
+}
