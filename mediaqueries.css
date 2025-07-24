@@ -41,6 +41,11 @@
     font-size: 16px;
     line-height: 1.4;
   }
+    .project-card {
+    height: 255px;
+    width: 255px;
+    margin: 10px auto;
+  }
 }
 
 

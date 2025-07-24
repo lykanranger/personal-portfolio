@@ -61,3 +61,12 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
   }
 });
+
+
+// CERTIFICATES LOGOS
+
+var logos = document.querySelectorAll(".cert-logos");
+logos.forEach(function(logoContainer) {
+  var copy = logoContainer.querySelector(".cert-logos-slide").cloneNode(true);
+  logoContainer.appendChild(copy);
+});

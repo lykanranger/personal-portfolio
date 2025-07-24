@@ -441,7 +441,7 @@ section {
 }
 
 .portfolio-section h1 {
-  font-size: 85px;
+  font-size: 75px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -776,7 +776,7 @@ section {
 
 .logos-slide img {
   height: 5rem;
-  margin: 0 20px;
+  margin: 0 30px;
   transition: transform 0.3s cubic-bezier(.4, 2, .6, 1), box-shadow 0.3s;
 }
 
@@ -818,103 +818,122 @@ section {
 .cert-section {
   height: 100vh;
   padding: 50px 0;
-}     
+}
 
 .cert-container {
-  margin: 5rem;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 15rem;
-  gap: 5rem; 
   position: relative;
 }
 
-@media (max-width: 768px) {
-  .cert-container {
-    gap: 5rem;
+.timeline {
+  margin: 4em auto;
+  position: relative;
+  max-width: 46em;
+  list-style: none;
+}
+
+.timeline:before {
+  background-color: black;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2.5em;
+  width: 2px;
+  height: 100%;
+}
+
+.timeline-event {
+  position: relative;
+}
+
+.timeline-event-icon {
+  transition: transform 0.2s ease-in;
+  transform: rotate(45deg);
+  background-color: black;
+  outline: 10px solid white;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: 1em;
+  height: 1em;
+}
+
+.timeline-event:hover .timeline-event-icon {
+  transform: rotate(-45deg);
+  background-color: red;
+}
+
+.timeline-event-copy {
+  padding: 2em;
+  position: relative;
+  top: -1.875em;
+  left: 4em;
+  width: 80%;
+}
+
+.timeline-event-copy h3 {
+  font-size: 1.75em;
+}
+
+.timeline-event-copy h4 {
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.timeline-event-copy strong {
+  font-weight: 700;
+}
+
+.timeline-event-copy p:not(.timeline-event-thumbnail) {
+  padding-bottom: 1.2em;
+}
+
+.timeline-event-thumbnail {
+  transition: box-shadow 0.5s ease-in 0.1s;
+  color: white;
+  font-size: 0.75em;
+  background-color: black;
+  box-shadow: inset 0 0 0 0 #ef795a;
+  display: inline-block;
+  margin-bottom: 1.2em;
+  padding: 0.25em 1em 0.2em 1em;
+}
+
+.cert-logos {
+  overflow: hidden;
+  padding: 20px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cert-logos-slide {
+  display: inline-block;
+  animation: 25s cert-slide infinite linear;
+}
+
+.cert-logos-slide img {
+  height: 25px;
+  margin: 0 25px;
+}
+
+@keyframes cert-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 
-.cert-card {
-    position: relative;
-    width: 180px;
-    height: 180px;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding: 12px;
-    gap: 12px;
-    border-radius: 8px;
-    color: rgb(255, 255, 255);
-    border: 1px solid #333;
-    cursor: pointer;
-}
-
-a.about {
-  text-decoration: none;
-  color: inherit;
-}
-
-.cert-container a {
-  text-decoration: none;
-}
-
-.cert-card p {
-  color: #fff;
-}
-
-.cert-card > div {
-    margin: auto auto;
-}
-
-.cert-card::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    bottom: -5px;
-    left: -5px;
-    border-radius: 10px;
-    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
-    z-index: -10;
-    pointer-events: none;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.cert-card::after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
-    transform: translate3d(0, 0, 0) scale(0.95);
-    filter: blur(20px);
-}
-
-.cert-heading {
-    font-size: 20px;
-    text-transform: capitalize;
-    font-weight: 700;
-}
-
-.cert-card p:not(.cert-heading) {
-    font-size: 14px;
-}
-
-.cert-card p:last-child {
-    color: #fff01c;
-    font-weight: 600;
-}
-
-.cert-card:hover::after {
-    filter: blur(30px);
-}
-
-.cert-card:hover::before {
-    transform: rotate(-90deg) scaleX(1) scaleY(1);
-}
 .more-button {
   background: #fff;
   padding: 10px 20px;
@@ -924,20 +943,10 @@ a.about {
   width: 120px;
   text-transform: uppercase;
   cursor: pointer;
-  transform: skew(-21deg);
+  transform: skew(-21deg) translateX(-50%);
   position: absolute;
   left: 50%;
-  transform: translateX(-50%) skew(-21deg);
-  top: calc(100% + 170px);
-}
-
-@media (max-width: 768px) {
-  .more-button {
-    top: calc(100% + 85px);
-  }
-    .cert-container {
-    margin-top: 5rem; 
-    }
+  top: calc(100% + 5px);
 }
 
 .more-button span {
@@ -969,6 +978,15 @@ a.about {
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+  .more-button {
+    top: calc(100% + 5px);
+  }
+  .cert-container {
+    margin-top: 5rem;
+  }
+}
+
 /* PROJECTS SECTION */
 
 #projects {
@@ -990,7 +1008,7 @@ a.about {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-column-gap: 10px;
-  grid-row-gap: 10px; 
+  grid-row-gap: 30px; 
   max-width: var(--width-container);
   width: 100%;
   margin: 0 auto;
@@ -1012,8 +1030,8 @@ a.about {
 .project-card{
   list-style: none;
   position: relative;
-  height: 300px;
-  width: 300px;
+  height: 275px;
+  width: 275px;
 }
 
 .project-card:before{
@@ -1343,7 +1361,6 @@ a.animated-button {
   border-bottom: 1px solid #666;
   color: #ddd;
   font-size: 14px;
-  text-transform: uppercase;
   outline: none;
   transition: border-color .2s;
 }
