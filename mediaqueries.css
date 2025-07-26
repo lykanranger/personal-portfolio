@@ -41,11 +41,6 @@
     font-size: 16px;
     line-height: 1.4;
   }
-    .project-card {
-    height: 255px;
-    width: 255px;
-    margin: 10px auto;
-  }
 }
 
 
@@ -92,10 +87,6 @@
 
   .subtitle {
     font-size: 0.8rem;  
-  }
-
-  .project-card:last-child {
-    margin-bottom: 5rem;
   }
 
   #education .title {

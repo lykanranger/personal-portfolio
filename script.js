@@ -30,7 +30,7 @@ function typeText() {
 
 typeText();
 
-// LOADING batman
+// LOADING ANIMATION
 
 document.addEventListener('DOMContentLoaded', function() {
   const loadingButton = document.querySelector('.loading-button');
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(() => {
     loadingContainer.style.display = 'none';
     // window.location.href = 'https://your-website-url.com';
-  }, 3000); 
+  }, 3500); 
 });
 
 // CONTACT
