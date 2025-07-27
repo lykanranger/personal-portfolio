@@ -36,13 +36,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const loadingContainer = document.querySelector('.loading-container');
   
   setTimeout(() => {
-    loadingButton.classList.add('show');
-  }, 100);
-  
-  setTimeout(() => {
     loadingContainer.style.display = 'none';
   }, 3500); 
 });
+
+// LOGO SLIDE
+
+const logosSlide = document.querySelector('.logos-slide');
+const clonedLogosSlide = logosSlide.cloneNode(true);
+document.querySelector('.logos').appendChild(clonedLogosSlide);
 
 // CONTACT
 

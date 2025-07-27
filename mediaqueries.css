@@ -12,13 +12,11 @@
   #hamburger-nav {
     display: flex;
   }
-  #profile,
-  .section-container {
+  #profile {
     display: block;
   }
 
-  section,
-  .section-container {
+  section {
     height: fit-content;
   }
   section {
@@ -30,8 +28,7 @@
     margin: 0 auto 2rem;
   }
 
-  #education,
-  .section-container{
+  #education{
     height: fit-content;
   }
 }
@@ -78,9 +75,6 @@
   .text-container {
     text-align: justify;
   }
-  .section-container{
-    height: fit-content;
-  }
   .footer-credits {
     font-size: 0.8rem;
   }
@@ -112,5 +106,9 @@
 .cert-section .title {
   margin-bottom: 5rem;
   font-size: 2.5rem;
+}
+
+.services-section{
+  margin-bottom: 5rem;
 }
 }
