@@ -38,6 +38,8 @@ a,
   transition: all 300ms ease;
 }
 
+/* LOADER */
+
 .loading-container {
   position: fixed;
   top: 0;
@@ -1286,6 +1288,72 @@ section {
 a.animated-button {
   text-decoration: none !important;
 }
+
+/* SERVICES SECTION */
+
+.services-section {
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.services-title {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.services-subtitle {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 5rem;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.service-card {
+  background: black;
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 200px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  justify-content: center;
+}
+.service-card p{
+  color: #fff;
+}
+
+.service-icon-img {
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+.service-card:hover .service-icon-img {
+  animation: glitch 1s;
+}
+
 
 /* CONTACT */
 
