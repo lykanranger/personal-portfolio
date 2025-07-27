@@ -389,10 +389,6 @@ section {
   position: relative;
 }
 
-.txt {
-  color: #000000;
-}
-
 /* CONTAINERS */
 
 .portfolio-hero-container {
@@ -507,8 +503,7 @@ section {
   text-shadow: 0 20px 40px rgba(0, 0, 0, 0);
 }
 
-.portfolio-hero-theme-dark p,
-.portfolio-hero-theme-dark a {
+.portfolio-hero-theme-dark p {
   color: #ffffff;
   letter-spacing: 7px;
   text-transform: uppercase;
@@ -950,37 +945,6 @@ section {
   display: inline-block;
   margin-bottom: 1.2em;
   padding: 0.25em 1em 0.2em 1em;
-}
-
-.cert-logos {
-  overflow: hidden;
-  padding: 20px 0;
-  background: white;
-  white-space: nowrap;
-  position: relative;
-  width: 100vw;
-  margin: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.cert-logos-slide {
-  display: inline-block;
-  animation: 25s cert-slide infinite linear;
-}
-
-.cert-logos-slide img {
-  height: 25px;
-  margin: 0 25px;
-}
-
-@keyframes cert-slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
 }
 
 .more-button {

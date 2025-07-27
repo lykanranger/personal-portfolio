@@ -33,7 +33,6 @@ typeText();
 // LOADING ANIMATION
 
 document.addEventListener('DOMContentLoaded', function() {
-  const loadingButton = document.querySelector('.loading-button');
   const loadingContainer = document.querySelector('.loading-container');
   
   setTimeout(() => {
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   setTimeout(() => {
     loadingContainer.style.display = 'none';
-    // window.location.href = 'https://your-website-url.com';
   }, 3500); 
 });
 
@@ -62,11 +60,3 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-
-// CERTIFICATES LOGOS
-
-var logos = document.querySelectorAll(".cert-logos");
-logos.forEach(function(logoContainer) {
-  var copy = logoContainer.querySelector(".cert-logos-slide").cloneNode(true);
-  logoContainer.appendChild(copy);
-});
