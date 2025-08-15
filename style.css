@@ -1010,17 +1010,17 @@ section {
 .project-card-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 4rem;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   padding: 3.5rem 0;
 }
 
 .project-card {
-  width: 300px;
-  height: 330px;
+  width: 295px;
+  height: 325px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1145,7 +1145,7 @@ section {
 @media (max-width: 900px) {
   .project-card {
     width: 100%;
-    width: 320px;
+    width: 295px;
     
   }
 }
