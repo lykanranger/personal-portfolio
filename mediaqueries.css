@@ -163,20 +163,18 @@
 @media screen and (max-width: 600px) {
   .screen-body-item.left {
     display: flex;
+    margin: 0 !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .screen-body-item.left > * {
     margin: 0;
-    flex-direction: column;
-    align-items: center;
   }
 
-    .screen-body-item.left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  #contact .app-contact {
+    display: none;
   }
-  .app-contact {
-    margin-top: 1px;
-  }
-
 }
 
 @media (max-width: 1024px) {

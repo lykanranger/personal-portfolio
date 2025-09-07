@@ -1314,7 +1314,7 @@ a.animated-button {
   padding: 10px;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .know-more-title {
