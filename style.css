@@ -1613,7 +1613,6 @@ a.animated-button {
   border-radius: 50%;
   background-color: white;
   border: 2px solid #0c0c0c;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: center;
