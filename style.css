@@ -1496,37 +1496,6 @@ a.animated-button {
   margin: 0;
 }
 
-.footer-nav-container {
-  width: 100%;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.footer-nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0;
-}
-
-.footer-nav-links li a {
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  padding: 0.5rem 0;
-}
-
-.footer-nav-links li a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.7rem;
-  text-decoration-color: #ffffff;
-  cursor: pointer;
-}
-
 #footer-lights {
   position: absolute;
   bottom: -60px;
@@ -1634,4 +1603,46 @@ a.animated-button {
   color: #fff;
   font-size: 1rem;
   text-align: center;
+}
+
+.back2top {
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #0c0c0c;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  transition: all 0.5s;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.back2top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.svg {
+  transition: all 0.5s;
+}
+
+.back2top:hover {
+  background-color: #0c0c0c;
+  border: 2px solid white;
+
+}
+
+.back2top:hover .svg {
+  fill: white;
+  transform: scale(1.2);
 }

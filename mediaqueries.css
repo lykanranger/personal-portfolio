@@ -176,26 +176,3 @@
     display: none;
   }
 }
-
-@media (max-width: 1024px) {
-  .footer-nav-links {
-    gap: 1.5rem;
-  }
-
-  .footer-nav-links li a {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-
-  .footer-nav-links li a {
-    font-size: 12px;
-  }
-}

@@ -61,3 +61,22 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
   }
 });
+
+// SCROLL REVEAL
+
+const backToTopBtn = document.querySelector('.back2top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > window.innerHeight * 0.2) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
