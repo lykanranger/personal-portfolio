@@ -62,17 +62,23 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-// SCROLL REVEAL
+// BACK TO TOP BUTTON
 
 const backToTopBtn = document.querySelector('.back2top');
+const footer = document.querySelector('footer');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > window.innerHeight * 0.2) {
-    backToTopBtn.classList.add('show');
-  } else {
-    backToTopBtn.classList.remove('show');
-  }
-});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+observer.observe(footer);
+
 
 backToTopBtn.addEventListener('click', () => {
   window.scrollTo({
