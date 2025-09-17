@@ -276,11 +276,6 @@ a:hover {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.blur {
-  filter: blur(5px);
-  transition: filter 0.3s;
-}
-
 /* SECTIONS */
 
 section {
@@ -448,7 +443,8 @@ section {
 }
 
 .portfolio-about-center {
-  height: 100%;
+  max-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -456,6 +452,7 @@ section {
   padding: 20px;
   text-align: center;
   position: relative;
+  overflow-y: auto;
 }
 
 .portfolio-logo1_container {
@@ -856,8 +853,10 @@ section {
 /* <!-- Certificates --> */
 
 .cert-section {
+  max-height: 100vh;
   height: 100vh;
   padding: 50px 0;
+  overflow-y: auto;
 }
 
 .cert-container {
@@ -1238,6 +1237,7 @@ a.animated-button {
   height: 100vh;
   text-align: center;
   padding: 2rem;
+  padding-bottom: 5rem;
 }
 
 .services-title {
@@ -1654,12 +1654,10 @@ a.animated-button {
 }
 
 .back2top:hover {
-  background-color: #0c0c0c;
-  border: 2px solid white;
-
+  background-color: rgb(0, 255, 75);
 }
 
 .back2top:hover .svg {
-  fill: white;
+  fill: rgb(0, 0, 0);
   transform: scale(1.2);
 }
