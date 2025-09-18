@@ -1315,7 +1315,7 @@ a.animated-button {
   padding: 10px;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 80vh;
 }
 
 .know-more-title {
@@ -1630,7 +1630,7 @@ a.animated-button {
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 255, 75);
   border: 2px solid #0c0c0c;
   display: flex;
   flex-direction: column;
@@ -1655,7 +1655,7 @@ a.animated-button {
 }
 
 .back2top:hover {
-  background-color: rgb(0, 255, 75);
+  background-color: rgb(255, 255, 255);
 }
 
 .back2top:hover .svg {
