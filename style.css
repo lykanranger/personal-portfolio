@@ -1315,7 +1315,7 @@ a.animated-button {
   padding: 10px;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 80vh;
 }
 
 .know-more-title {
@@ -1661,4 +1661,5 @@ a.animated-button {
 .back2top:hover .svg {
   fill: rgb(0, 0, 0);
   transform: scale(1.2);
+
 }
