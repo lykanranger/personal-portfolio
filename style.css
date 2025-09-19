@@ -544,6 +544,7 @@ section {
 }
 
 .card {
+  margin: 1rem;
   width: 320px;
   height: 350px;
   border-radius: 10px;
