@@ -1,6 +1,6 @@
 My Personal Portfolio Website
 
-![Home image](path/assets/ogmiage.png)
+![Home image](assets/ogmiage.png)
 
 Welcome to the official repository for my personal portfolio website. This project showcases my skills, projects, and journey as a web developer. It's designed to be a clean, modern, and fully responsive representation of my work.
 
