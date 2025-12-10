@@ -89,17 +89,20 @@ backToTopBtn.addEventListener('click', () => {
 
 // SMOOTH SCROLL
 
-function smoothScrollTo(element, duration = 1800) {
+function smoothScrollTo(element) {
   const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
   const startPosition = window.pageYOffset;
   const distance = targetPosition - startPosition;
+  const duration = 2500;
   let startTime = null;
 
   function animation(currentTime) {
     if (startTime === null) startTime = currentTime;
     const timeElapsed = currentTime - startTime;
     const progress = Math.min(timeElapsed / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 5);
+    const ease = progress < 0.5
+      ? 4 * Math.pow(progress, 3)
+      : 1 - Math.pow(-2 * progress + 2, 3) / 2;
     window.scrollTo(0, startPosition + distance * ease);
     if (timeElapsed < duration) requestAnimationFrame(animation);
   }
@@ -108,5 +111,6 @@ function smoothScrollTo(element, duration = 1800) {
 }
 
 document.querySelector("#to-section").addEventListener("click", () => {
-  smoothScrollTo(document.querySelector("#section2"), 1800);
+  smoothScrollTo(document.querySelector("#section2"));
 });
+
