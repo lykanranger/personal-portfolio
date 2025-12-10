@@ -86,3 +86,27 @@ backToTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+// SMOOTH SCROLL
+
+function smoothScrollTo(element, duration = 1800) {
+  const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 5);
+    window.scrollTo(0, startPosition + distance * ease);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  requestAnimationFrame(animation);
+}
+
+document.querySelector("#to-section").addEventListener("click", () => {
+  smoothScrollTo(document.querySelector("#section2"), 1800);
+});
