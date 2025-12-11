@@ -33,13 +33,6 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .txt {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-}
-
 
 @media screen and (max-width: 600px) {
   #profile {
@@ -71,9 +64,6 @@
   }
   .title {
     font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
   }
   .footer-credits {
     font-size: 0.8rem;
@@ -141,14 +131,6 @@
   }
   .cert-container {
     margin-top: 5rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .project-card {
-    width: 100%;
-    width: 295px;
-    
   }
 }
 

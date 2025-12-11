@@ -40,6 +40,53 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 3500); 
 });
 
+// ABOUT ME
+
+document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.getElementById('typewriter-text');
+    
+    const phrases = [ 
+        "Final year MCA student", 
+        "Software Developer", 
+        "Creative Problem Solver",
+        "Building Modern Web Apps", 
+        "Tech Enthusiast"
+    ];
+
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
+
+    function loopTypewriter() {
+        const currentPhrase = phrases[phraseIndex];
+        const chars = [...currentPhrase]; 
+
+        if (isDeleting) {
+            textElement.textContent = chars.slice(0, charIndex - 1).join("");
+            charIndex--;
+            typeSpeed = 50; 
+        } else {
+            textElement.textContent = chars.slice(0, charIndex + 1).join("");
+            charIndex++;
+            typeSpeed = 100; 
+        }
+
+        if (!isDeleting && charIndex === chars.length) {
+            isDeleting = true;
+            typeSpeed = 2000; 
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length; 
+            typeSpeed = 500; 
+        }
+
+        setTimeout(loopTypewriter, typeSpeed);
+    }
+
+    loopTypewriter();
+});
+
 // LOGO SLIDE
 
 const logosSlide = document.querySelector('.logos-slide');
@@ -109,8 +156,3 @@ function smoothScrollTo(element) {
 
   requestAnimationFrame(animation);
 }
-
-document.querySelector("#to-section").addEventListener("click", () => {
-  smoothScrollTo(document.querySelector("#section2"));
-});
-
