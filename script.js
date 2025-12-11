@@ -46,10 +46,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.getElementById('typewriter-text');
     
     const phrases = [ 
-        "Final year MCA student", 
+        "MCA Final year", 
         "Software Developer", 
         "Creative Problem Solver",
-        "Building Modern Web Apps", 
+        "Building Modern Web Apps",
+        "Generative AI Certified",
+        "Full Stack Developer",
+        "Gemini Certified University Student", 
         "Tech Enthusiast"
     ];
 
@@ -140,7 +143,7 @@ function smoothScrollTo(element) {
   const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
   const startPosition = window.pageYOffset;
   const distance = targetPosition - startPosition;
-  const duration = 2500;
+  const duration = 1000;
   let startTime = null;
 
   function animation(currentTime) {
