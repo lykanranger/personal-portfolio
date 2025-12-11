@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", function() {
         "MCA Final year", 
         "Software Developer", 
         "Creative Problem Solver",
-        "Building Modern Web Apps",
         "Generative AI Certified",
         "Full Stack Developer",
-        "Gemini Certified University Student", 
-        "Tech Enthusiast"
+        "Tech Savvy",
+        "Gemini Certified University Student",
+        "Building Modern Web Apps",
     ];
 
     let phraseIndex = 0;
