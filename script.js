@@ -49,10 +49,10 @@ document.addEventListener("DOMContentLoaded", function() {
         "MCA Final year", 
         "Software Developer", 
         "Creative Problem Solver",
+        "Gemini Certified",
         "Generative AI Certified",
         "Full Stack Developer",
         "Tech Savvy",
-        "Gemini Certified University Student",
         "Building Modern Web Apps",
     ];
 
