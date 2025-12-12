@@ -449,22 +449,6 @@ section {
   position: relative;
 }
 
-.about-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  background-color: #000000;
-  opacity: 0.7;
-  z-index: -1;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: high-quality;
-  transform: translateZ(0);
-}
-
 .bio .description {
   color: #ffffff;
   font-size: 25px;
@@ -534,12 +518,8 @@ section {
     height: 40px;
   }
 
-  .about-image {
-    object-fit: cover;
-  }
-
   .bio .description {
-    font-size: 18px;
+    font-size: 20px;
     padding: 0 10px;
   }
 }
