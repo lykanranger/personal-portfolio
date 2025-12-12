@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   setTimeout(() => {
     loadingContainer.style.display = 'none';
-  }, 3500); 
+  }, 3000); 
 });
 
 // ABOUT ME
@@ -46,14 +46,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.getElementById('typewriter-text');
     
     const phrases = [ 
-        "MCA Final year", 
-        "Software Developer", 
-        "Creative Problem Solver",
-        "Gemini Certified",
-        "Generative AI Certified",
-        "Full Stack Developer",
-        "Tech Savvy",
-        "Building Modern Web Apps",
+      "MCA Final Year Student", 
+      "Software Developer", 
+      "Full Stack Developer", 
+      "Creative Problem Solver",
+      "Strong Communicator",
+      "Analytical Thinker",
+      "Time Management Expert",
+      "Adaptable Learner",
+      "Team Player",
+      "Building Modern Web Apps",
+      "Gemini Certified",
+      "Generative AI Certified",
+      "UI/UX Focused",
+      "Tech Savvy",
     ];
 
     let phraseIndex = 0;
