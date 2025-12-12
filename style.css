@@ -485,7 +485,6 @@ section {
   letter-spacing: 5px;
   text-transform: uppercase;
   white-space: nowrap;
-  margin-bottom: 5rem;
 }
 
 .img-box {
@@ -1306,7 +1305,6 @@ a.animated-button {
 .service-card:hover .service-icon-img {
   animation: glitch 1s;
 }
-
 
 /* CONTACT */
 
