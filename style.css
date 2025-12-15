@@ -445,14 +445,19 @@ section {
         padding: 0 5%;
     }
 
+    #about .section-label{
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+
     #about h1 {
         font-size: 1.8rem;
         line-height: 1.3;
     }
 
     #about .bottom-image {
-        width: 180px;
-        height: 60px; 
+        width: 170px;
+        height: 50px; 
         margin-top: 5rem;
     }
 }
