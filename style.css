@@ -1,7 +1,6 @@
 /* GENERAL */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -10,24 +9,16 @@
 
 html {
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden; 
+  position: relative;
 }
 
 p {
   color: rgb(85, 85, 85);
-}
-
-:root {
-  --body-color: rgb(250, 250, 250);
-  --color-white: rgb(255, 255, 255);
-  --text-color-second: rgb(0, 0, 0);
-  --second-color: rgb(0, 0, 0);
-  --first-shadow-color: rgba(0, 0, 0, 0.25);
 }
 
 /* TRANSITION */
@@ -358,13 +349,6 @@ section {
   margin-top: 2rem;
 }
 
-/* ICONS */
-
-.icon {
-  cursor: pointer;
-  height: 2rem;
-}
-
 /* BUTTONS */
 
 .btn {
@@ -389,138 +373,94 @@ section {
 
 /* ABOUT SECTION */
 
-.section {
-  height: 125vh;
-  min-height: 500px;
-  position: relative;
+#about {
+    background-color: #000;
+    color: #ffffff;
+    height: 300vh;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.clipper {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  z-index: 2;
-  clip: rect(auto, auto, auto, auto);
-  pointer-events: none;
+#about .section-label {
+    color: #888888;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 00;
 }
 
-.fixed-wrap {
-  position: fixed;
-  top: 0; left: 0; right: 0; height: 100%;
-  z-index: 99;
-  transform: translateZ(0);
-  will-change: transform;
-  pointer-events: all;
+#about .sticky-text {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
 }
 
-.content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  z-index: 10;
+#about h1 {
+    font-size: 3rem;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 900px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #ffffff;
 }
 
-.hero {
-  background: black;
+#about .letter {
+    opacity: 0.4;
+    transition: opacity 0.1s ease;
 }
 
-.hero h1 {
-  font-size: 100px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+#about .letter.active {
+    opacity: 1;
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff;
 }
 
-.hero .subtitle {
-  color: #ffffff;
-  letter-spacing: 7px;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-top: 1rem;
+#about .bottom-image {
+    margin-top: 5rem;
+    width: 180px;
+    height: 60px;
+    object-fit: cover;
+    opacity: 1;
 }
 
-.bio {
-  background: #000;
-  position: relative;
-}
-
-.bio .description {
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: 300;
-  max-width: 800px;
-  line-height: 1.6;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-}
-
-.bio .description::after {
-  content: "";
-  display: inline-block;
-  width: 3px;
-  height: 1.2em;
-  background-color: white;
-  margin-left: 5px;
-  vertical-align: text-bottom;
-  animation: blink 0.7s step-end infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.outro {
-  background: black;
-}
-
-.outro-text {
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: 500;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.img-box {
-  position: absolute;
-  bottom: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-}
-
-.img-box img {
-  width: 180px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
+@media (max-width: 1024px) {
+    #about h1 {
+        font-size: 2.5rem;
+        max-width: 80%;
+    }
 }
 
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 50px;
-  }
+    #about .sticky-text {
+        padding: 0 5%;
+    }
 
-  .outro-text {
-    font-size: 4vw;
-    letter-spacing: 2px;
-  }
+    #about h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
 
-  .img-box img {
-    width: 160px;
-    height: 40px;
-  }
+    #about .bottom-image {
+        width: 180px;
+        height: 60px; 
+        margin-top: 5rem;
+    }
+}
 
-  .bio .description {
-    font-size: 20px;
-    padding: 0 10px;
-  }
+@media (max-width: 400px) {
+    #about h1 {
+        font-size: 1.5rem;
+    }
 }
 
 /* EDUCATION */
@@ -566,8 +506,8 @@ section {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  width: 35px;
-  height: 23px;
+  width: 30px;
+  height: 20px;
   background: url('https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg') no-repeat center center;
   background-size: cover;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -590,7 +530,6 @@ section {
 
 .title-mca {
   margin: 10px 0;
-  letter-spacing: 3px;
   color: #000;
   font-size: 1rem;
   font-weight: bold;
@@ -602,7 +541,7 @@ section {
 .seats-mca {
   margin-bottom: 10px;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.80rem;
   color: rgba(26, 26, 26, 0.7);
 }
 
@@ -617,7 +556,7 @@ section {
 
 .txt-mca {
   line-height: 2;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   transition: all 0.5s ease-in-out 0.25s;
@@ -647,7 +586,6 @@ section {
 
 .title-bca {
   margin: 10px 0;
-  letter-spacing: 3px;
   color: #000;
   font-size: 1rem;
   font-weight: bold;
@@ -659,7 +597,7 @@ section {
 .seats-bca {
   margin-bottom: 10px;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.80rem;
   color: rgba(26, 26, 26, 0.7);
 }
 
@@ -674,7 +612,7 @@ section {
 
 .txt-bca {
   line-height: 2;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   transition: all 0.5s ease-in-out 0.25s;
@@ -704,7 +642,6 @@ section {
 
 .title-cse {
   margin: 10px 0;
-  letter-spacing: 3px;
   color: #000;
   font-size: 1rem;
   font-weight: bold;
@@ -716,7 +653,7 @@ section {
 .seats-cse {
   margin-bottom: 10px;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.80rem;
   color: rgba(26, 26, 26, 0.7);
 }
 
@@ -731,7 +668,7 @@ section {
 
 .txt-cse {
   line-height: 2;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.7);
   opacity: 0;
   transition: all 0.5s ease-in-out 0.25s;
@@ -1249,23 +1186,12 @@ a.animated-button {
   padding-bottom: 5rem;
 }
 
-.services-title {
-  font-size: 2rem;
-  color: black;
-  margin-bottom: 0.5rem;
-}
-
-.services-subtitle {
-  color: #333;
-  font-size: 1rem;
-  margin-bottom: 5rem;
-}
-
 .services-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
   justify-content: center;
+  margin: 5rem 0;
 }
 
 .service-card {

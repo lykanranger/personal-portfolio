@@ -1,4 +1,3 @@
-
 // TOGGLEMENU 
 
 function toggleMenu() {
@@ -43,57 +42,43 @@ document.addEventListener('DOMContentLoaded', function() {
 // ABOUT ME
 
 document.addEventListener("DOMContentLoaded", function() {
-    const textElement = document.getElementById('typewriter-text');
+    const textElement = document.getElementById('reveal-text');
+    const container = document.querySelector('.scroll-container');
     
-    const phrases = [ 
-      "MCA Final Year Student", 
-      "Software Developer", 
-      "Full Stack Developer", 
-      "Creative Problem Solver",
-      "Strong Communicator",
-      "Analytical Thinker",
-      "Time Management Expert",
-      "Adaptable Learner",
-      "Team Player",
-      "Building Modern Web Apps",
-      "Gemini Certified",
-      "Generative AI Certified",
-      "UI/UX Focused",
-      "Tech Savvy",
-    ];
+    const text = textElement.innerText;
+    const chars = text.split(''); 
+    
+    textElement.innerHTML = '';
+    
+    chars.forEach(char => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.classList.add('letter'); 
+        textElement.appendChild(span);
+    });
 
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typeSpeed = 100;
+    const letterSpans = document.querySelectorAll('.letter');
+    const totalChars = letterSpans.length;
 
-    function loopTypewriter() {
-        const currentPhrase = phrases[phraseIndex];
-        const chars = [...currentPhrase]; 
+    window.addEventListener('scroll', () => {
+        const containerTop = container.offsetTop;
+        const containerHeight = container.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollY = window.scrollY;
 
-        if (isDeleting) {
-            textElement.textContent = chars.slice(0, charIndex - 1).join("");
-            charIndex--;
-            typeSpeed = 50; 
-        } else {
-            textElement.textContent = chars.slice(0, charIndex + 1).join("");
-            charIndex++;
-            typeSpeed = 100; 
-        }
+        let progress = (scrollY - containerTop) / (containerHeight - windowHeight);
+        progress = Math.max(0, Math.min(1, progress));
 
-        if (!isDeleting && charIndex === chars.length) {
-            isDeleting = true;
-            typeSpeed = 2000; 
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length; 
-            typeSpeed = 500; 
-        }
+        const charsToReveal = Math.floor(progress * totalChars);
 
-        setTimeout(loopTypewriter, typeSpeed);
-    }
-
-    loopTypewriter();
+        letterSpans.forEach((span, index) => {
+            if (index < charsToReveal) {
+                span.classList.add('active');
+            } else {
+                span.classList.remove('active');
+            }
+        });
+    });
 });
 
 // LOGO SLIDE
@@ -142,26 +127,3 @@ backToTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
-
-// SMOOTH SCROLL
-
-function smoothScrollTo(element) {
-  const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
-  const startPosition = window.pageYOffset;
-  const distance = targetPosition - startPosition;
-  const duration = 1000;
-  let startTime = null;
-
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    const timeElapsed = currentTime - startTime;
-    const progress = Math.min(timeElapsed / duration, 1);
-    const ease = progress < 0.5
-      ? 4 * Math.pow(progress, 3)
-      : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-    window.scrollTo(0, startPosition + distance * ease);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
-  }
-
-  requestAnimationFrame(animation);
-}
