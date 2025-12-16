@@ -373,24 +373,31 @@ section {
 
 /* ABOUT SECTION */
 
+.intro-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    position: relative;
+    z-index: 10;
+}
+
+.intro-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
 #about {
     background-color: #000;
-    color: #ffffff;
     height: 300vh;
     position: relative;
     width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-#about .section-label {
-    color: #888888;
-    font-size: 1rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    font-family: 'Poppins', sans-serif; 
-    font-weight: 00;
 }
 
 #about .sticky-text {
@@ -402,6 +409,7 @@ section {
     align-items: center;
     justify-content: center;
     padding: 0 10%;
+    box-sizing: border-box; 
 }
 
 #about h1 {
@@ -413,24 +421,55 @@ section {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     color: #ffffff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 #about .letter {
-    opacity: 0.4;
+    opacity: 0.2;
     transition: opacity 0.1s ease;
 }
 
 #about .letter.active {
     opacity: 1;
-    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
 #about .bottom-image {
     margin-top: 5rem;
     width: 180px;
     height: 60px;
-    object-fit: cover;
+    object-fit: contain;
     opacity: 1;
+}
+
+.outro-section {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.outro-section .description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    color: #888;
+    margin: 0;
+    text-align: center;
+}
+
+#typewriter-text {
+    color: #fff;
+    font-weight: 600;
+    border-right: 3px solid #fff;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 @media (max-width: 1024px) {
@@ -441,31 +480,15 @@ section {
 }
 
 @media (max-width: 768px) {
-    #about .sticky-text {
-        padding: 0 5%;
-    }
-
-    #about .section-label{
-        font-size: 1rem;
-        letter-spacing: 3px;
-    }
-
-    #about h1 {
-        font-size: 1.8rem;
-        line-height: 1.3;
-    }
-
-    #about .bottom-image {
-        width: 170px;
-        height: 50px; 
-        margin-top: 5rem;
-    }
+    .intro-section h2 { font-size: 2.5rem; }
+    #about .sticky-text { padding: 0 5%; }
+    #about h1 { font-size: 1.8rem; line-height: 1.3; }
+    #about .bottom-image { width: 150px; height: 50px; margin-top: 3rem; }
+    .outro-section .description { font-size: 1.5rem; padding: 0 20px; }
 }
 
 @media (max-width: 400px) {
-    #about h1 {
-        font-size: 1.5rem;
-    }
+    #about h1 { font-size: 1.5rem; }
 }
 
 /* EDUCATION */

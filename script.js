@@ -42,34 +42,40 @@ document.addEventListener('DOMContentLoaded', function() {
 // ABOUT ME
 
 document.addEventListener("DOMContentLoaded", function() {
-    const textElement = document.getElementById('reveal-text');
-    const container = document.querySelector('.scroll-container');
     
-    const text = textElement.innerText;
-    const chars = text.split(''); 
+    // PARALLAX SCROLL REVEAL ---
+
+    const revealElement = document.getElementById('reveal-text');
+    const scrollContainer = document.querySelector('.scroll-container');
     
-    textElement.innerHTML = '';
+    const originalText = revealElement.innerText;
+    const revealChars = originalText.split(''); 
+    revealElement.innerHTML = '';
     
-    chars.forEach(char => {
+    revealChars.forEach(char => {
         const span = document.createElement('span');
-        span.textContent = char;
+        if (char === ' ') {
+            span.textContent = ' '; 
+        } else {
+            span.textContent = char;
+        }
         span.classList.add('letter'); 
-        textElement.appendChild(span);
+        revealElement.appendChild(span);
     });
 
     const letterSpans = document.querySelectorAll('.letter');
-    const totalChars = letterSpans.length;
+    const totalRevealChars = letterSpans.length;
 
     window.addEventListener('scroll', () => {
-        const containerTop = container.offsetTop;
-        const containerHeight = container.offsetHeight;
+        const containerTop = scrollContainer.offsetTop;
+        const containerHeight = scrollContainer.offsetHeight;
         const windowHeight = window.innerHeight;
         const scrollY = window.scrollY;
 
         let progress = (scrollY - containerTop) / (containerHeight - windowHeight);
         progress = Math.max(0, Math.min(1, progress));
 
-        const charsToReveal = Math.floor(progress * totalChars);
+        const charsToReveal = Math.floor(progress * totalRevealChars);
 
         letterSpans.forEach((span, index) => {
             if (index < charsToReveal) {
@@ -79,6 +85,60 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    //TYPEWRITER EFFECT ---
+
+    const typeElement = document.getElementById('typewriter-text');
+   
+    const phrases = [
+      "Final Year MCA Student",
+      "Software Developer",
+      "Full Stack Developer",
+      "Creative Problem Solver",
+      "Strong Communicator",
+      "Analytical Thinker",
+      "Time Management Expert",
+      "Adaptable Learner",
+      "Team Player",
+      "Building Modern Web Apps",
+      "Gemini Certified",
+      "Nvidia Certified",
+      "Generative AI Certified",
+      "UI/UX Focused",
+      "Tech Savvy",
+    ];
+
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
+
+    function loopTypewriter() {
+        const currentPhrase = phrases[phraseIndex];
+        
+        if (isDeleting) {
+            typeElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 50;
+        } else {
+            typeElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 100;
+        }
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            isDeleting = true;
+            typeSpeed = 2000;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            typeSpeed = 500;
+        }
+
+        setTimeout(loopTypewriter, typeSpeed);
+    }
+
+    loopTypewriter();
 });
 
 // LOGO SLIDE
