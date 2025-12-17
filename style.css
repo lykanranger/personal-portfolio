@@ -385,7 +385,7 @@ section {
 
 .intro-section h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: 5px;
     font-weight: 600;
     margin: 0;
@@ -480,15 +480,15 @@ section {
 }
 
 @media (max-width: 768px) {
-    .intro-section h2 { font-size: 2.5rem; }
+    .intro-section h2 { font-size: 4rem; }
     #about .sticky-text { padding: 0 5%; }
-    #about h1 { font-size: 1.8rem; line-height: 1.3; }
-    #about .bottom-image { width: 150px; height: 50px; margin-top: 3rem; }
+    #about h1 { font-size: 2rem; line-height: 1.5; }
+    #about .bottom-image { width: 150px; height: 50px; margin-top: 5rem; }
     .outro-section .description { font-size: 1.5rem; padding: 0 20px; }
 }
 
 @media (max-width: 400px) {
-    #about h1 { font-size: 1.5rem; }
+    #about h1 { font-size: 2rem; }
 }
 
 /* EDUCATION */
