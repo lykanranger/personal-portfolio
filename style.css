@@ -239,6 +239,7 @@ a {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  z-index: 100;
 }
 
 .menu-links a {
@@ -350,7 +351,7 @@ section {
 }
 
 .section_text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #000;
 }
 
