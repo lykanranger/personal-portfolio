@@ -339,6 +339,11 @@ section {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 2rem;
+  min-height: 4.5rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section__text__p1 {
