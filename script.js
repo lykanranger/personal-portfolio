@@ -10,18 +10,38 @@ function toggleMenu() {
 // TYPEING
 
 const typingText = document.getElementById("typing-text");
-const text = "KARUN BINNY";
-let index = 0;
+
+const names = [
+  "KARUN BINNY",
+  "卡伦·宾尼",
+  "كارون بيني",
+  "카룬 비니"
+];
+
+let nameIndex = 0;
+let charIndex = 0;
 
 function typeText() {
-  if (index < text.length) {
-    typingText.innerHTML += text[index];
-    index++;
+  if (nameIndex === 0) {
+    typingText.style.fontWeight = "300";
+  } else {
+    typingText.style.fontWeight = "600";
+  }
+
+  let currentName = names[nameIndex];
+
+  if (charIndex < currentName.length) {
+    typingText.innerHTML += currentName[charIndex];
+    charIndex++;
     setTimeout(typeText, 150);
   } else {
     setTimeout(() => {
       typingText.innerHTML = "";
-      index = 0;
+      charIndex = 0;
+      nameIndex++;
+      if (nameIndex >= names.length) {
+        nameIndex = 0;
+      }
       typeText();
     }, 1000);
   }
