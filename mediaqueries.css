@@ -126,6 +126,11 @@
   .subtitle {
     font-size: 0.8rem;
   }
+
+  #typing-text {
+    font-size: 2rem;
+    min-height: 3rem;
+  }
   
   #education .title,
   #skills .title,
