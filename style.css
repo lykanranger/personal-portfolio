@@ -530,8 +530,6 @@ section {
     object-fit: contain;
 }
 
-/* --- RESPONSIVE --- */
-
 @media (max-width: 1024px) {
     #about h1 { font-size: 2.5rem; max-width: 80%; }
 }
@@ -1161,11 +1159,11 @@ section {
   padding: 16px 36px;
   border: none;
   font-size: 16px;
-  background-color: #181717;
+  background-color: #ffffff;
   border-radius: 100px;
   font-weight: 600;
-  color: #fff;
-  box-shadow: 0 0 0 2px #fff;
+  color: #000000;
+  box-shadow: 0 0 0 2px #000000;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -1175,7 +1173,7 @@ section {
 .animated-button svg {
   position: absolute;
   width: 24px;
-  fill: #fff;
+  fill: #000000;
   z-index: 9;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -1195,7 +1193,7 @@ section {
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background-color: greenyellow;
+  background-color: rgb(0, 0, 0);
   border-radius: 50%;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -1210,7 +1208,7 @@ section {
 
 .animated-button:hover {
   box-shadow: 0 0 0 12px transparent;
-  color: #212121;
+  color: #ffffff;
   border-radius: 100px;
 }
 
@@ -1227,7 +1225,7 @@ section {
 }
 
 .animated-button:hover svg {
-  fill: #212121;
+  fill: #ffffff;
 }
 
 .animated-button:active {
@@ -1414,14 +1412,14 @@ a.animated-button {
 
 .app-contact a {
   text-decoration: none;
-  color: #ffffff;
+  color: #898989;
   font-size: 13px;
   position: relative;
   top: 50px; 
 }  
 
 .app-contact a:hover {
-  color: #00ff33;
+  color: #ffffff;
 }
 
 .app-contact i {
@@ -1461,7 +1459,7 @@ a.animated-button {
 }
 
 #contact .app-form-control:focus {
-  border-bottom-color: #ddd;
+  border-bottom-color: #00aeff;
 }
 
 #contact .app-form-button {
@@ -1473,7 +1471,11 @@ a.animated-button {
   outline: none;
 }
 
-#contact .app-form-button:hover {
+#contact .app-form-button[type="reset"]:hover {
+  color: #ff3333;
+}
+
+#contact .app-form-button[type="submit"]:hover {
   color: #00ff40;
 }
 
