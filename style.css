@@ -405,25 +405,83 @@ section {
 
 /* ABOUT SECTION */
 
-.intro-section {
+.ticker-scroll-track {
+    position: relative;
+    width: 100%;
+}
+
+.ticker-sticky-wrap {
+    position: sticky;
+    top: 0;
+    width: 100%;
     height: 100vh;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #000;
-    position: relative;
+}
+
+.ticker-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('assets/bgimage.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ticker-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: left;
     z-index: 10;
 }
 
-.intro-section h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 5rem;
-    letter-spacing: 5px;
-    font-weight: 600;
-    margin: 0;
-    color: #ffffff;
-    text-transform: uppercase;
+.ticker-move {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 5vw;
+    will-change: transform;
 }
+
+.ticker-item {
+    flex-shrink: 0;
+    padding: 0 3vw;
+    font-size: clamp(3rem, 7.5vw, 12rem);
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+    position: relative;
+}
+
+.ticker-gray {
+    color: #ffffff;
+}
+
+.ticker-item::after {
+    content: " > ";
+    position: absolute;
+    right: -1vw;
+    color: #838383;
+    font-size: 0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ticker-item:last-child::after {
+    display: none;
+}
+
+/* --- ABOUT REVEAL SECTION --- */
 
 #about {
     background-color: #000;
@@ -441,7 +499,7 @@ section {
     align-items: center;
     justify-content: center;
     padding: 0 10%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 #about h1 {
@@ -453,8 +511,6 @@ section {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     color: #ffffff;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
 }
 
 #about .letter {
@@ -472,51 +528,18 @@ section {
     width: 180px;
     height: 60px;
     object-fit: contain;
-    opacity: 1;
 }
 
-.outro-section {
-    height: 100vh;
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.outro-section .description {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem;
-    color: #888;
-    margin: 0;
-    text-align: center;
-}
-
-#typewriter-text {
-    color: #fff;
-    font-weight: 600;
-    border-right: 3px solid #fff;
-    padding-right: 5px;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
-}
+/* --- RESPONSIVE --- */
 
 @media (max-width: 1024px) {
-    #about h1 {
-        font-size: 2.5rem;
-        max-width: 80%;
-    }
+    #about h1 { font-size: 2.5rem; max-width: 80%; }
 }
 
 @media (max-width: 768px) {
-    .intro-section h2 { font-size: 3.5rem; padding: 0 15px; }
     #about .sticky-text { padding: 0 5%; }
     #about h1 { font-size: 2rem; line-height: 1.5; }
-    #about .bottom-image { width: 150px; height: 50px; margin-top: 5rem; }
-    .outro-section .description { font-size: 1.5rem; padding: 0 20px; }
+    #about .bottom-image { width: 150px; height: 50px; }
 }
 
 @media (max-width: 400px) {
@@ -1305,10 +1328,11 @@ a.animated-button {
 
 #contact .screen {
   position: relative;
-  background: #3e3e3e;
+  background: #080808;
   border-radius: 15px;
   width: 90%; 
   max-width: 600px;
+  border: gray 2px solid;
 }
 
 #contact .screen:after {
@@ -1328,7 +1352,7 @@ a.animated-button {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  background: #4d4d4f;
+  background: gray;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -1386,17 +1410,6 @@ a.animated-button {
   position: relative;
   color: #ffffff;
   font-size: 26px;
-}
-
-#contact .app-title:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 25px;
-  height: 4px;
-  background: #00ff33;
 }
 
 .app-contact a {
