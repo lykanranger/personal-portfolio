@@ -1326,11 +1326,11 @@ a.animated-button {
 
 #contact .screen {
   position: relative;
-  background: #080808;
+  background: #000000;
   border-radius: 15px;
   width: 90%; 
   max-width: 600px;
-  border: gray 2px solid;
+  border: rgb(79, 79, 79) 2px solid;
 }
 
 #contact .screen:after {
@@ -1350,9 +1350,9 @@ a.animated-button {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  background: gray;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  background: rgb(79, 79, 79);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 #contact .screen-header-left {
