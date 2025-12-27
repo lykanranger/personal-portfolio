@@ -213,3 +213,7 @@ backToTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+// UPDATE YEAR IN FOOTER
+
+document.getElementById("year").textContent = new Date().getFullYear();

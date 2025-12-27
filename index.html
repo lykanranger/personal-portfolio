@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="mediaqueries.css"/>
     <link rel="icon" type="image/png" href="assets/favicon.png?v=1">
     <link rel="apple-touch-icon" href="assets/favicon.png?v=1">
+    
     <!-- Font Awesome CDN -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
@@ -108,6 +109,7 @@
             </button>
           </div>
       </div>
+        <div class="scroll-chevron" onclick="document.querySelector('.ticker-scroll-track').scrollIntoView({ behavior: 'smooth' })"></div>
     </section>
 
      <!-- About -->
@@ -490,8 +492,10 @@
       </article>
 
       <p class="footer-credits">
-        Made with <span class="heart-beat">❤️</span> by Karun <br> &copy; 2025. All Rights Reserved
+        Made with <span class="heart-beat">❤️</span> by Karun<br>
+          © <span id="year"></span>. All Rights Reserved
       </p>
+
     </footer>
 
       <!-- Back to top button -->
