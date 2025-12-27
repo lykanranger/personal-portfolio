@@ -308,6 +308,7 @@ section {
   position: relative;
   gap: 5rem;
   height: 85vh;
+  height: 85dvh;
 }
 
 .section__pic-container {
@@ -360,12 +361,40 @@ section {
   color: #000;
 }
 
-
 .title {
   font-size: 3rem;
   text-align: center;
   color: rgb(0, 0, 0);
   margin-top: 2rem;
+}
+
+.scroll-chevron {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: translateX(-50%) rotate(45deg);
+  animation: chevron 1.5s infinite;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.scroll-chevron::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  bottom: -15px;
+  left: -15px;
+}
+
+@keyframes chevron {
+  0% { opacity: 0; transform: translateX(-50%) translateY(0) rotate(45deg); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(10px) rotate(45deg); }
 }
 
 /* BUTTONS */

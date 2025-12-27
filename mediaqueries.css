@@ -97,8 +97,12 @@
 @media screen and (max-width: 600px) {
   #profile {
     height: 80vh;
+    height: 80dvh;
     margin-bottom: 0;
     margin-top: 3rem;
+  }
+  .scroll-chevron {
+    bottom: 80px;
   }
   article {
     font-size: 1rem;
