@@ -182,4 +182,7 @@
   #contact .app-title span {
     margin-right: 12px;
   }
+  .footer-credits {
+    font-size: 0.6rem;
+  }  
 }
