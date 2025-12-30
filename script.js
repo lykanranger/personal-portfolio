@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    // --- 1. HORIZONTAL TICKER (STICKY SCROLL) ---
+    // --- 1. HORIZONTAL SCROLL ---
     
     const track = document.querySelector('.ticker-scroll-track');
     const stickyWrap = document.querySelector('.ticker-sticky-wrap');
