@@ -49,129 +49,130 @@ function typeText() {
 
 typeText();
 
-// LOADING ANIMATION
-
-document.addEventListener('DOMContentLoaded', function() {
-  const loadingContainer = document.querySelector('.loading-container');
-  
-  setTimeout(() => {
-    loadingContainer.style.display = 'none';
-  }, 3000); 
-});
 
 // ABOUT ME
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
-    // --- 1. HORIZONTAL SCROLL ---
-    
-    const track = document.querySelector('.ticker-scroll-track');
-    const stickyWrap = document.querySelector('.ticker-sticky-wrap');
-    const scroller = document.querySelector('.ticker-move');
-    const progressBar = document.querySelector('.ticker-progress');
+  // LOADING ANIMATION
+  
+  const loadingContainer = document.querySelector('.loading-container');
+  if (loadingContainer) {
+    setTimeout(() => {
+      loadingContainer.style.display = 'none';
+    }, 3000);
+  }
 
-    let currentScrollX = 0;
-    let targetScrollX = 0;
-    let maxTranslate = 0;
-    let animationFrameId;
+  // --- 1. HORIZONTAL SCROLL ---
 
-    const lerp = (start, end, factor) => start + (end - start) * factor;
+  const track = document.querySelector('.ticker-scroll-track');
+  const scroller = document.querySelector('.ticker-move');
+  const progressBar = document.querySelector('.ticker-progress');
 
-    function initTicker() {
-        if (!track || !scroller) return;
-        const contentWidth = scroller.scrollWidth;
-        const viewportWidth = window.innerWidth;
-        maxTranslate = contentWidth - viewportWidth;
+  let currentScrollX = 0;
+  let targetScrollX = 0;
+  let maxTranslate = 0;
+  let animationFrameId;
 
-        if (maxTranslate <= 0) {
-            maxTranslate = 0;
-            track.style.height = '100vh';
-            return;
-        }
-        track.style.height = `${maxTranslate + window.innerHeight}px`;
+  const lerp = (start, end, factor) => start + (end - start) * factor;
+
+  function initTicker() {
+    if (!track || !scroller) return;
+
+    const contentWidth = scroller.scrollWidth;
+    const viewportWidth = window.innerWidth;
+
+    maxTranslate = Math.max(0, contentWidth - viewportWidth);
+
+    track.style.height = maxTranslate > 0
+      ? `${maxTranslate + window.innerHeight}px`
+      : '100vh';
+  }
+
+  function animateTicker() {
+    currentScrollX = lerp(currentScrollX, targetScrollX, 0.08);
+    currentScrollX = Math.max(0, Math.min(currentScrollX, maxTranslate));
+
+    scroller.style.transform = `translateX(-${currentScrollX}px)`;
+
+    if (progressBar && maxTranslate > 0) {
+      progressBar.style.transform =
+        `scaleX(${currentScrollX / maxTranslate})`;
     }
 
-    function animateTicker() {
-        currentScrollX = lerp(currentScrollX, targetScrollX, 0.08);
-        
-        if (scroller) {
-            scroller.style.transform = `translateX(-${currentScrollX}px)`;
-        }
-
-        if (progressBar && maxTranslate > 0) {
-            const progress = Math.max(0, Math.min(1, currentScrollX / maxTranslate));
-            progressBar.style.transform = `scaleX(${progress})`;
-        }
-
-        if (Math.abs(targetScrollX - currentScrollX) > 0.5) {
-            animationFrameId = requestAnimationFrame(animateTicker);
-        }
+    if (Math.abs(targetScrollX - currentScrollX) > 0.5) {
+      animationFrameId = requestAnimationFrame(animateTicker);
     }
+  }
 
-    function onScroll() {
-        if (!track) return;
-        
-        const rect = track.getBoundingClientRect();
-        const start = 0;
-        const scrollDistance = -rect.top;
-        targetScrollX = Math.max(0, Math.min(scrollDistance, maxTranslate));
+  function onScroll() {
+    if (!track) return;
 
-        cancelAnimationFrame(animationFrameId);
-        animationFrameId = requestAnimationFrame(animateTicker);
-    }
+    const rect = track.getBoundingClientRect();
+    const scrollDistance = Math.max(0, -rect.top);
 
-    initTicker();
-    window.addEventListener('resize', initTicker);
-    window.addEventListener('scroll', onScroll, { passive: true });
+    targetScrollX = Math.min(scrollDistance, maxTranslate);
+
+    cancelAnimationFrame(animationFrameId);
+    animationFrameId = requestAnimationFrame(animateTicker);
+  }
+
+  initTicker();
+
+  window.addEventListener('load', initTicker);
+  window.addEventListener('resize', initTicker);
+  window.addEventListener('scroll', onScroll, { passive: true });
 
 
-    // --- 2. PARALLAX TEXT REVEAL ---
+  // --- 2. PARALLAX TEXT REVEAL ---
 
-    const revealElement = document.getElementById('reveal-text');
-    const scrollContainer = document.querySelector('#about');
-    
-    if (revealElement && scrollContainer) {
-        const originalText = revealElement.innerText;
-        const revealChars = originalText.trim().split(''); 
-        revealElement.innerHTML = '';
-        
-        revealChars.forEach(char => {
-            const span = document.createElement('span');
-            span.textContent = char;
-            span.classList.add('letter'); 
-            revealElement.appendChild(span);
-        });
+  const revealElement = document.getElementById('reveal-text');
+  const scrollContainer = document.querySelector('#about');
 
-        const letterSpans = document.querySelectorAll('.letter');
-        const totalRevealChars = letterSpans.length;
+  if (revealElement && scrollContainer) {
+    const originalText = revealElement.innerText;
+    const revealChars = originalText.trim().split('');
+    revealElement.innerHTML = '';
 
-        window.addEventListener('scroll', () => {
-            const containerTop = scrollContainer.offsetTop;
-            const containerHeight = scrollContainer.offsetHeight;
-            const windowHeight = window.innerHeight;
-            const scrollY = window.scrollY;
+    revealChars.forEach(char => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      span.classList.add('letter');
+      revealElement.appendChild(span);
+    });
 
-            let progress = (scrollY - containerTop) / (containerHeight - windowHeight);
-            progress = Math.max(0, Math.min(1, progress));
+    const letterSpans = document.querySelectorAll('.letter');
+    const totalRevealChars = letterSpans.length;
 
-            const charsToReveal = Math.floor(progress * totalRevealChars);
+    window.addEventListener('scroll', () => {
+      const containerTop = scrollContainer.offsetTop;
+      const containerHeight = scrollContainer.offsetHeight;
+      const windowHeight = window.innerHeight;
+      const scrollY = window.scrollY;
 
-            letterSpans.forEach((span, index) => {
-                if (index < charsToReveal) {
-                    span.classList.add('active');
-                } else {
-                    span.classList.remove('active');
-                }
-            });
-        });
-    }
+      let progress = (scrollY - containerTop) / (containerHeight - windowHeight);
+      progress = Math.max(0, Math.min(1, progress));
+
+      const charsToReveal = Math.floor(progress * totalRevealChars);
+
+      letterSpans.forEach((span, index) => {
+        if (index < charsToReveal) {
+          span.classList.add('active');
+        } else {
+          span.classList.remove('active');
+        }
+      });
+    });
+  }
 });
+
 
 // LOGO SLIDE
 
 const logosSlide = document.querySelector('.logos-slide');
 const clonedLogosSlide = logosSlide.cloneNode(true);
 document.querySelector('.logos').appendChild(clonedLogosSlide);
+
 
 // CONTACT
 
@@ -188,6 +189,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
   }
 });
+
 
 // BACK TO TOP BUTTON
 
@@ -206,13 +208,13 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(footer);
 
-
 backToTopBtn.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
   });
 });
+
 
 // UPDATE YEAR IN FOOTER
 
