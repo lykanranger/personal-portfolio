@@ -1534,24 +1534,6 @@ section {
   to { box-shadow: 0 0 100px 15px #F4F6AD; }
 }
 
-.heart-beat {
-  display: inline-block;
-  animation: beat 1.2s infinite ease-in-out;
-  transform-origin: center;
-}
-
-@keyframes beat {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .footer-credits {
   position: absolute;
   bottom: 10px;
@@ -1560,6 +1542,16 @@ section {
   color: #fff;
   font-size: 1rem;
   text-align: center;
+}
+
+.footer-credits .name {
+  color: #a7a7a7;
+  text-transform: uppercase;
+}
+
+.footer-credits .separator {
+  color: red;
+  font-weight: 500;
 }
 
 .back2top {
