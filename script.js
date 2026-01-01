@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (loadingContainer) {
     setTimeout(() => {
       loadingContainer.style.display = 'none';
-    }, 3500);
+    }, 3000);
   }
 
   // --- 1. HORIZONTAL SCROLL ---
