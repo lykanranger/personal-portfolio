@@ -49,27 +49,36 @@ a,
   display: block;
   width: 3px;
   height: 2.5em;
-  transform: rotate(20deg);
-  transform-origin: bottom center;
+  transform: rotate(20deg) scaleY(1);
+  transform-origin: center;
   opacity: 0;
-  box-shadow: 0 0 0px transparent;
 }
 
+/* RED */
 .spinner span:nth-child(1) {
   background: red;
-  animation: appearRed 3s forwards, glowRed 3s forwards;
+  animation:
+    appearRed 3s forwards,
+    pulseEnd 0.35s ease-out 2.7s forwards;
 }
 
+/* GRAY */
 .spinner span:nth-child(2) {
   background: gray;
-  animation: appearGray 3s forwards, glowGray 3s forwards;
+  animation:
+    appearGray 3s forwards,
+    pulseEnd 0.35s ease-out 2.7s forwards;
 }
 
+/* WHITE */
 .spinner span:nth-child(3) {
   background: white;
-  animation: appearWhite 3s forwards, glowWhite 3s forwards;
+  animation:
+    appearWhite 3s forwards,
+    pulseEnd 0.35s ease-out 2.7s forwards;
 }
 
+/* APPEAR */
 @keyframes appearRed {
   0%, 15% { opacity: 0; }
   16%, 100% { opacity: 1; }
@@ -85,19 +94,11 @@ a,
   66%, 100% { opacity: 1; }
 }
 
-@keyframes glowRed {
-  0%, 89% { box-shadow: 0 0 0px transparent; }
-  90%, 100% { box-shadow: 0 0 15px red; }
-}
-
-@keyframes glowGray {
-  0%, 89% { box-shadow: 0 0 0px transparent; }
-  90%, 100% { box-shadow: 0 0 15px gray; }
-}
-
-@keyframes glowWhite {
-  0%, 89% { box-shadow: 0 0 0px transparent; }
-  90%, 100% { box-shadow: 0 0 15px white; }
+/* END PULSE (CENTERED) */
+@keyframes pulseEnd {
+  0%   { transform: rotate(20deg) scaleY(1); }
+  50%  { transform: rotate(20deg) scaleY(1.18); }
+  100% { transform: rotate(20deg) scaleY(1); }
 }
 
 /* DESKTOP NAV */
@@ -1439,7 +1440,7 @@ section {
 
 .footer-socials a {
   font-size: 24px;
-  color: #8b8b8b;
+  color: gray;
   transition: color 0.3s ease;
 }
 
@@ -1467,7 +1468,7 @@ section {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  color: rgb(99, 99, 99);
+  color: gray;
   font-size: 1rem;
   text-align: center;
   line-height: 1.6;
