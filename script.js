@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (loadingContainer) {
     setTimeout(() => {
       loadingContainer.style.display = 'none';
-    }, 3000);
+    }, 5000);
   }
 
   // --- 1. HORIZONTAL SCROLL ---
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('scroll', onScroll, { passive: true });
 
 
-  // --- 2. PARALLAX TEXT REVEAL ---
+  // --- 2. STICKY TEXT ---
 
   const revealElement = document.getElementById('reveal-text');
   const scrollContainer = document.querySelector('#about');
