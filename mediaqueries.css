@@ -176,8 +176,8 @@
   .footer-credits {
     font-size: 1rem;
   }
-  .footer-socials {
-    gap: 1.5rem;
+  .footer-socials a {
+    font-size: 20px;
   }    
 }
 
