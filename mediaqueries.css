@@ -129,9 +129,6 @@
   .title {
     font-size: 2rem;
   }
-  .footer-credits {
-    font-size: 0.9rem;
-  }
   .subtitle {
     font-size: 0.8rem;
   }
@@ -139,7 +136,7 @@
     font-size: 2rem;
     min-height: 3rem;
   }
-    .about-slashes {
+  .about-slashes {
     bottom: 70px;
     font-size: 1.4rem;
     letter-spacing: 4px;
@@ -175,7 +172,13 @@
   .ticker-item::after {
       right: -0.5rem;
       font-size: 0.8em;
-  }  
+  }
+  .footer-credits {
+    font-size: 1rem;
+  }
+  .footer-socials {
+    gap: 1.5rem;
+  }    
 }
 
 /* --- Small Mobile --- */
