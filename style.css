@@ -1519,7 +1519,7 @@ section {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  color: #ffffff;
+  color: gray;
   font-size: 1rem;
   text-align: center;
   line-height: 1.6;
@@ -1531,57 +1531,42 @@ section {
 
 .creator strong {
   font-weight: 800;
-  color: #ffffff;
+  color: white;
 }
 
-.blink {
+.slashes {
   animation: brokenLight 5s infinite;
 }
 
 @keyframes brokenLight {
-  0% {
-    opacity: 1;
-  }
+  0% { opacity: 1; }
 
-  6% {
-    opacity: 0.3;
-  }
+  3% { opacity: 0.4; }
+  5% { opacity: 1; }
 
-  8% {
-    opacity: 1;
-  }
+  8% { opacity: 0.15; }
+  9% { opacity: 1; }
 
-  11% {
-    opacity: 0.2;
-  }
+  12% { opacity: 0.3; }
+  14% { opacity: 1; }
 
-  14% {
-    opacity: 1;
-  }
+  37% { opacity: 1; }
 
-  60% {
-    opacity: 1;
-  }
+  41% { opacity: 0.2; }
+  43% { opacity: 1; }
 
-  62% {
-    opacity: 0.4;
-  }
+  46% { opacity: 0.1; }
+  47% { opacity: 1; }
 
-  64% {
-    opacity: 1;
-  }
+  71% { opacity: 1; }
 
-  67% {
-    opacity: 0.1;
-  }
+  74% { opacity: 0.35; }
+  75% { opacity: 1; }
 
-  69% {
-    opacity: 1;
-  }
+  89% { opacity: 0.2; }
+  90% { opacity: 1; }
 
-  100% {
-    opacity: 1;
-  }
+  100% { opacity: 1; }
 }
 
 .slashes {
