@@ -139,6 +139,13 @@
     font-size: 2rem;
     min-height: 3rem;
   }
+    .about-slashes {
+    bottom: 70px;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    opacity: 0.7;
+    animation-duration: 8s;
+  }
   #education .title,
   #skills .title,
   #projects .title,
