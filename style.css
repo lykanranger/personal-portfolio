@@ -43,6 +43,8 @@ a,
 .spinner {
   display: flex;
   gap: 1em;
+  z-index: 1;
+  animation: spinnerFade 0.4s ease-out 2.9s forwards;
 }
 
 .spinner span {
@@ -54,7 +56,6 @@ a,
   opacity: 0;
 }
 
-/* RED */
 .spinner span:nth-child(1) {
   background: red;
   animation:
@@ -62,7 +63,6 @@ a,
     pulseEnd 0.35s ease-out 2.7s forwards;
 }
 
-/* GRAY */
 .spinner span:nth-child(2) {
   background: gray;
   animation:
@@ -70,7 +70,6 @@ a,
     pulseEnd 0.35s ease-out 2.7s forwards;
 }
 
-/* WHITE */
 .spinner span:nth-child(3) {
   background: white;
   animation:
@@ -78,7 +77,6 @@ a,
     pulseEnd 0.35s ease-out 2.7s forwards;
 }
 
-/* APPEAR */
 @keyframes appearRed {
   0%, 15% { opacity: 0; }
   16%, 100% { opacity: 1; }
@@ -94,11 +92,30 @@ a,
   66%, 100% { opacity: 1; }
 }
 
-/* END PULSE (CENTERED) */
-@keyframes pulseEnd {
-  0%   { transform: rotate(20deg) scaleY(1); }
-  50%  { transform: rotate(20deg) scaleY(1.18); }
-  100% { transform: rotate(20deg) scaleY(1); }
+@keyframes spinnerFade {
+  to { opacity: 0; }
+}
+
+.end-image {
+  position: absolute;
+  width: 90px;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(0.85);
+  animation: kbReveal 0.6s ease-out 3s forwards;
+  pointer-events: none;
+}
+
+/* IMAGE REVEAL */
+@keyframes kbReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* DESKTOP NAV */
