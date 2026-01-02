@@ -167,11 +167,11 @@
     display: none;
   }
   .ticker-item {
-        padding: 0 1.5rem;
+    padding: 0 1.5rem;
   }
   .ticker-item::after {
-      right: -0.5rem;
-      font-size: 0.8em;
+    right: -0.5rem;
+    font-size: 0.8em;
   }
   .footer-credits {
     font-size: 1rem;

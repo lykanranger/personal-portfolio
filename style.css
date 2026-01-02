@@ -377,26 +377,26 @@ section {
 
 .btn-color-1 {
   background: none;
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: rgb(0, 0, 0) 0.1rem solid;
 }
 
 .btn-color-1:hover {
-  background: rgb(53, 53, 53);
+  background: rgb(0, 0, 0);
   color: white;
   border: rgb(255, 255, 255) 0.1rem solid;
   cursor: pointer;
 }
 
 .btn-color-2 {
-  background: rgb(53, 53, 53);
+  background: rgb(0, 0, 0);
   color: white;
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: rgb(0, 0, 0) 0.1rem solid;
 }
 
 .btn-color-2:hover {
   background: white;
-  color: rgb(53, 53, 53);
-  border: rgb(53, 53, 53) 0.1rem solid;
+  color: rgb(0, 0, 0);
+  border: rgb(0, 0, 0) 0.1rem solid;
   cursor: pointer;
 }
 
@@ -428,6 +428,20 @@ section {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.ticker-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    rgba(255,255,255,0.95) 6%,
+    rgba(255,255,255,0.6) 12%,
+    rgba(255,255,255,0) 22%
+  );
+  pointer-events: none;
 }
 
 .ticker-progress {
@@ -464,17 +478,19 @@ section {
 }
 
 .ticker-gray {
-    color: #ffffff;
+  color: #c3c3c3;
 }
 
 .ticker-item::after {
-    content: " > ";
-    position: absolute;
-    right: -1vw;
-    color: #838383;
-    font-size: 0.5em;
-    top: 50%;
-    transform: translateY(-50%);
+  content: " > ";
+  position: absolute;
+  right: -1vw;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #838383;
+  -webkit-text-stroke: 0;
+  -webkit-text-fill-color: #838383;
+  font-size: 0.5em;
 }
 
 .ticker-item:last-child::after {
@@ -1441,7 +1457,7 @@ section {
   color: #0A66C2;
 }
 .footer-socials li:nth-child(4):hover a {
-  color: #E4405F;
+  color: #ff0084;
 }
 .footer-socials li:nth-child(5):hover a {
   color: #ffffff;
@@ -1471,8 +1487,19 @@ section {
 }
 
 .slashes {
+  display: inline-block;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 1;
+  transform: scaleY(0.8);
+  position: relative;
+  top: -1px;
   animation: brokenLight 5s infinite;
 }
+
+.slashes span:nth-child(1) { color: red; }
+.slashes span:nth-child(2) { color: gray; }
+.slashes span:nth-child(3) { color: white; }
 
 @keyframes brokenLight {
   0% { opacity: 1; }
@@ -1504,20 +1531,6 @@ section {
 
   100% { opacity: 1; }
 }
-
-.slashes {
-  display: inline-block;
-  font-weight: 900;
-  letter-spacing: 2px;
-  line-height: 1;
-  transform: scaleY(0.8);
-  position: relative;
-  top: -1px;
-}
-
-.slashes span:nth-child(1) { color: red; }
-.slashes span:nth-child(2) { color: gray; }
-.slashes span:nth-child(3) { color: white; }
 
 .footer-credits .separator {
   color: red;
