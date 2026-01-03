@@ -195,6 +195,14 @@ form.addEventListener('submit', (e) => {
 
 const backToTopBtn = document.querySelector('.back2top');
 const footer = document.querySelector('footer');
+const isSmallScreen = window.innerWidth <= 520;
+
+const observerOptions = {
+  threshold: isSmallScreen ? 0.05 : 0.2,
+  rootMargin: isSmallScreen
+    ? '0px 0px -120px 0px'
+    : '0px 0px -40px 0px'
+};
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -204,10 +212,9 @@ const observer = new IntersectionObserver((entries) => {
       backToTopBtn.classList.remove('show');
     }
   });
-}, { threshold: 0.2 });
+}, observerOptions);
 
 observer.observe(footer);
-
 backToTopBtn.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
