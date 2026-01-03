@@ -169,7 +169,7 @@
     row-gap: 4rem;
   }  
   .services-section {
-    margin-bottom: 5rem;
+    padding: 1rem;
   }
   .screen-body-item.left {
     display: flex;
