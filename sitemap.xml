@@ -2,26 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://karunbinny-portfolio.netlify.app/</loc>
-  </url>
-  <url>
-    <loc>https://karunbinny-portfolio.netlify.app/#about</loc>
-  </url>
-  <url>
-    <loc>https://karunbinny-portfolio.netlify.app/#education</loc>
-  </url>
-  <url>
-    <loc>https://karunbinny-portfolio.netlify.app/#skills</loc>
-  </url>
-  <url>
-    <loc>https://karunbinny-portfolio.netlify.app/#certifications</loc>
-  </url>
-  <url>
-    <loc>https://karunbinny-portfolio.netlify.app/#projects</loc>
-  </url>
-  <url>
-    <loc>https://karunbinny-portfolio.netlify.app/#services</loc>
-  </url>
-  <url>
-    <loc>https://karunbinny-portfolio.netlify.app/#contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 </urlset>
