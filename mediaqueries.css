@@ -207,12 +207,6 @@
   #contact .screen-body-item.left {
     margin-bottom: 30px;
   }
-  #contact .app-title {
-    flex-direction: row;
-  }
-  #contact .app-title span {
-    margin-right: 12px;
-  }
   .footer-credits {
     font-size: 0.6rem;
   }
