@@ -14,12 +14,10 @@
 /* --- Tablets & Small Laptops --- */
 
 @media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
+  nav {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
   #profile {
     display: block;
   }
@@ -40,12 +38,18 @@
 /* --- Nest Hub, Zenbook & Landscape Tablets --- */
 
 @media screen and (max-width: 1024px) {
-  
+  .section__pic-container {
+    width: 200px;
+    height: 200px;
+  }
   .project-card-container {
     gap: 1.5rem;
     padding-left: 2rem;
     padding-right: 2rem;
     width: 100%;
+  }
+  .menu-links li {
+    margin-top: 1.2rem;
   }
   #projects {
     padding-bottom: 4rem;
@@ -113,16 +117,8 @@
   article {
     font-size: 1rem;
   }
-  .nav-links li a {
-    font-size: 1rem;
-  }
   .logo {
     font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
   }
   .section__pic-container {
     width: 46vw;
