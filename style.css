@@ -1408,18 +1408,18 @@ section {
 #contact .app-form-button {
   background: none;
   border: none;
-  color: #ffffff;
+  color: gray;
   font-size: 14px;
   cursor: pointer;
   outline: none;
 }
 
 #contact .app-form-button[type="reset"]:hover {
-  color: #ff3333;
+  color: #ffffff;
 }
 
 #contact .app-form-button[type="submit"]:hover {
-  color: rgb(0, 255, 0);
+  color: rgb(255, 255, 255);
 }
 
 /*  Footer  */
@@ -1546,8 +1546,8 @@ section {
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  border: 2px solid #000000;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid gray;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1568,6 +1568,7 @@ section {
 
 .svg {
   transition: all 0.5s;
+  fill: gray;
 }
 
 .back2top:hover {
