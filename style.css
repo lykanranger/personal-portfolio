@@ -699,6 +699,14 @@ body.light-theme .hero-logo-dark {
   position: relative;
 }
 
+body.light-theme #about {
+  background-color: #000;
+}
+
+body.light-theme #about h1 {
+  color: #fff;
+}
+
 @media (max-width: 1024px) {
   #about h1 {
     font-size: 2.5rem;
@@ -1550,7 +1558,7 @@ body.light-theme .service-card:hover {
 }
 
 #contact .app-form-control:focus {
-  border-bottom-color: oklch(71.629% 0.16479 240.252);
+  border-bottom-color: cyan;
 }
 
 #contact .app-form-button {
