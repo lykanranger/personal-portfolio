@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8" />
@@ -19,18 +20,19 @@
   <link rel="stylesheet" href="mediaqueries.css" />
 
   <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
   <!-- BASIC SEO -->
-  <meta name="description" content="Karun Binny is a Software Developer from Kerala, India. Explore his portfolio showcasing projects, skills, and experience."/>
-  <meta name="keywords" content="Karun Binny, Karun Binny Portfolio, Software Developer, MCA Student, Kerala"/>
+  <meta name="description"
+    content="Karun Binny is a Software Developer from Kerala, India. Explore his portfolio showcasing projects, skills, and experience." />
+  <meta name="keywords" content="Karun Binny, Karun Binny Portfolio, Software Developer, MCA Student, Kerala" />
   <meta name="author" content="Karun Binny" />
   <meta name="robots" content="index, follow" />
 
   <!-- OPEN GRAPH -->
   <meta property="og:title" content="Karun Binny – Software Developer" />
-  <meta property="og:description" content="Official portfolio of Karun Binny, Software Developer from Kottayam Kerala, India."/>
-  <meta property="og:image" content="https://karunbinny-portfolio.netlify.app/assets/ogimage.png"/>
+  <meta property="og:description"
+    content="Official portfolio of Karun Binny, Software Developer from Kottayam Kerala, India." />
   <meta property="og:site_name" content="Karun Binny Portfolio" />
   <meta property="og:url" content="https://karunbinny-portfolio.netlify.app/" />
   <meta property="og:type" content="website" />
@@ -43,7 +45,7 @@
     "name": "Karun Binny",
     "alternateName": "Karun Binny",
     "url": "https://karunbinny-portfolio.netlify.app/",
-    "image": "https://karunbinny-portfolio.netlify.app/assets/profile.jpg",
+    "image": "https://karunbinny-portfolio.netlify.app/assets/avatar.jpeg",
     "jobTitle": "Software Developer",
     "description": "Karun Binny is a Software Developer from Kerala, India.",
     "sameAs": [
@@ -56,484 +58,533 @@
 
 </head>
 
-  <body>
+<body>
 
-     <!-- Loading animation -->
+  <!-- Loading animation -->
 
-    <div class="loading-container">
-      <div class="loader-wrapper">
+  <div class="loading-container">
+    <div class="loader-wrapper">
 
-        <span class="loader-letter">L</span>
-        <span class="loader-letter">o</span>
-        <span class="loader-letter">a</span>
-        <span class="loader-letter">d</span>
-        <span class="loader-letter">i</span>
-        <span class="loader-letter">n</span>
-        <span class="loader-letter">g</span>
+      <span class="loader-letter">L</span>
+      <span class="loader-letter">O</span>
+      <span class="loader-letter">A</span>
+      <span class="loader-letter">D</span>
+      <span class="loader-letter">I</span>
+      <span class="loader-letter">N</span>
+      <span class="loader-letter">G</span>
 
-        <div class="loader"></div>
+      <div class="loader"></div>
 
-      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+
+  <nav id="desktop-nav">
+    <a href="#" class="logo">
+      <img src="./assets/logo light.png" alt="Logo" class="logo-img light-logo">
+      <img src="./assets/logo dark.png" alt="Logo" class="logo-img dark-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#education">EDUCATION</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#services">SERVICES</a></li>
+    </ul>
+
+    <div class="theme-switch-wrapper">
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-sun">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-moon" style="display: none;">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
     </div>
 
-     <!-- Navbar -->
 
-    <nav id="desktop-nav">
-      <a href="#">
-        <img class="logo" src="assets/logo.png">
-      </a>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">ABOUT</a></li>
+        <li><a href="#education" onclick="toggleMenu()">EDUCATION</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">PROJECTS</a></li>
+        <li><a href="#services" onclick="toggleMenu()">SERVICES</a></li>
+        <li>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- Profile -->
+
+  <div class="blur-overlay"></div>
+
+  <section id="profile">
+
+    <div class="hero-container">
+
+      <div class="hero">
+        <button class="btn btn-color-1 float-left" onclick="window.open('./assets/RESUME.pdf')">
+          <span>RESUME</span>
+        </button>
+        <div class="hero-center-content">
+          <img src="./assets/avatar.jpeg" class="hero-img" alt="avatar">
+          <img src="./assets/logo light.png" class="hero-logo hero-logo-light" alt="logo">
+          <img src="./assets/logo dark.png" class="hero-logo hero-logo-dark" alt="logo">
         </div>
-        <ul class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">ABOUT</a></li>
-          <li><a href="#education" onclick="toggleMenu()">EDUCATION</a></li>
-          <li><a href="#certifications" onclick="toggleMenu()">CERTIFICATIONS</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">PROJECTS</a></li>
-          <li><a href="#services" onclick="toggleMenu()">SERVICES</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">CONTACT</a></li>
-        </ul>
+        <button class="btn btn-color-1 float-right" onclick="location.href='#contact'">
+          <span>CONTACT</span>
+        </button>
       </div>
-    </nav>
 
-     <!-- Profile -->
+    </div>
 
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile.jpg" alt="Profile Picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <p class="section_text" id="typing-text"></p>
-        <p class="section_text_p2">Software Developer 💻</p>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-1"
-              onclick="window.open('./assets/RESUME.pdf')">
-              RESUME
-            </button>
-            
-            <button 
-              class="btn btn-color-2" 
-              onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })">
-              CONTACT 
-            </button>
-          </div>
-      </div>
-        <div class="scroll-chevron" onclick="document.querySelector('.ticker-scroll-track').scrollIntoView({ behavior: 'smooth' })"></div>
-    </section>
+  </section>
 
-     <!-- About -->
-
+  <!-- About -->
+  <section id="ticker-section">
     <div class="ticker-scroll-track">
-        <div class="ticker-sticky-wrap">
-            <div class="ticker-bg"></div>
-            <div class="ticker-progress"></div>
-            <div class="ticker-move">
-                <div class="ticker-item ticker-gray">ABOUT ME</div>
-                <div class="ticker-item">Final Year MCA Student</div>
-                <div class="ticker-item">Software Developer</div>
-                <div class="ticker-item">Building Modern Web Apps</div>
-                <div class="ticker-item">UI/UX Designer</div>
-                <div class="ticker-item">Tech Savvy</div>
-            </div>
+      <div class="ticker-sticky-wrapper">
+        <div class="ticker-bg"></div>
+        <div class="ticker-progress"></div>
+        <div class="ticker-move">
+          <div class="ticker-item ticker-gray">ABOUT ME</div>
+          <div class="ticker-item">Final Year MCA Student</div>
+          <div class="ticker-item">Software Developer</div>
+          <div class="ticker-item">Building Modern Web Apps</div>
+          <div class="ticker-item">UI/UX Designer</div>
+          <div class="ticker-item">Tech Savvy</div>
         </div>
+      </div>
     </div>
+  </section>
 
-    <section id="about" class="scroll-container">
-      <div class="sticky-text">
-        <h1 id="reveal-text">
-          I craft digital experiences where logic meets creativity. My mission is to turn ambitious ideas into functional reality.
-        </h1>
+  <section id="about" class="scroll-container">
+    <div class="sticky-text">
+      <h1 id="reveal-text">
+        I craft digital experiences where logic meets creativity. My mission is to turn ambitious ideas into functional
+        reality.
+      </h1>
+    </div>
+  </section>
 
-        <span class="about-slashes">
+  <!-- Education -->
+
+  <section id="education">
+    <div class="education-container">
+      <h1 class="title">EDUCATION</h1>
+      <div class="cards-wrapper">
+        <!-- MCA Card -->
+        <article class="card card-mca">
+          <div class="thumb-mca"></div>
+          <div class="infos-mca">
+            <h2 class="title-mca">MASTER'S DEGREE <span class="flag"></span></h2>
+            <h3 class="mca">Mahatma Gandhi University</h3>
+            <h3 class="stat">MCA (2024 - Present)</h3>
+          </div>
+        </article>
+
+        <!-- BCA Card -->
+        <article class="card card-bca">
+          <div class="thumb-bca"></div>
+          <div class="infos-bca">
+            <h2 class="title-bca">BACHELOR'S DEGREE <span class="flag"></span></h2>
+            <h3 class="bca">Mahatma Gandhi University</h3>
+            <h3 class="stat"> BCA (2021 - 2024)</h3>
+          </div>
+        </article>
+
+        <!-- CSE Card -->
+        <article class="card card-cse">
+          <div class="thumb-cse"></div>
+          <div class="infos-cse">
+            <h2 class="title-cse">HIGHER SECONDARY<span class="flag"></span></h2>
+            <h3 class="cse">KERALA STATE BOARD</h3>
+            <h3 class="stat">CSE (2019 - 2021)</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+
+  <section id="skills">
+    <h1 class="title">SKILLS</h1>
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="./logos/html.png" alt="html">
+        <img src="./logos/excel.png" alt="excel">
+        <img src="./logos/python.png" alt="python">
+        <img src="./logos/java.png" alt="java">
+        <img src="./logos/C.png" alt="c">
+        <img src="./logos/snapseed.png" alt="snapseed">
+        <img src="./logos/creativecloud.png" alt="creativecloud"> 
+        <img src="./logos/apple.png" class="logo-light" alt="apple">
+        <img src="./logos/apple dark.png" class="logo-dark" alt="apple">
+        <img src="./logos/11.png" alt="11">
+        <img src="./logos/linux.png" alt="linux">
+        <img src="./logos/tailwind.png" alt="tailwind">
+        <img src="./logos/adobe.png" alt="adobe">
+        <img src="./logos/css.png" alt="css">
+        <img src="./logos/pycharm.png" alt="pycharm">
+        <img src="./logos/access.png" alt="access">
+        <img src="./logos/word.png" alt="word">
+        <img src="./logos/chatgpt.png" class="logo-light" alt="chatgpt">
+        <img src="./logos/chatgpt dark.png" class="logo-dark" alt="chatgpt">
+        <img src="./logos/figma.png" alt="figma">
+        <img src="./logos/photoshop.png" alt="photoshop">
+        <img src="./logos/php.png" alt="php">
+        <img src="./logos/microsoft.png" alt="microsoft">
+        <img src="./logos/ai.png" alt="ai">
+        <img src="./logos/ppt.png" alt="ppt">
+        <img src="./logos/C++.png" alt="c++">
+        <img src="./logos/react.png" alt="figma">
+        <img src="./logos/Nodejs.png" alt="figma">
+        <img src="./logos/github.png" class="logo-light" alt="github">
+        <img src="./logos/github dark.png" class="logo-dark" alt="github">
+        <img src="./logos/js.png" alt="js">
+        <img src="./logos/mysql.png" alt="mysql">
+        <img src="./logos/git.png" alt="git">
+        <img src="./logos/typescript.png" alt="typescript">
+        <img src="./logos/lightroom.png" alt="lightroom">
+        <img src="./logos/mongodb.png" alt="mongodb">
+        <img src="./logos/Canva.png" alt="Canva">
+        <img src="./logos/office.png" alt="office">
+        <img src="./logos/vscode.png" alt="vscode">
+        <img src="./logos/bootstrap.png" alt="bootstrap">
+        <img src="./logos/gemini.png" alt="gemini">
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+
+  <section class="cert-section" id="certifications">
+    <h1 class="title">CERTIFICATIONS</h1>
+    <div class="cert-container">
+      <ul class="timeline">
+        <li class="timeline-event">
+          <label class="timeline-event-icon"></label>
+          <div class="timeline-event-copy">
+            <p class="timeline-event-thumbnail">2025</p>
+            <h3>Gemini Certified University Student</h3>
+            <h4>Google</h4>
+            <p>Completed Google's Gemini certification, validating proficiency in generative AI concepts, effective
+              prompt engineering, and the responsible application of AI tools for academic and technical projects.</p>
+          </div>
+        </li>
+        <li class="timeline-event">
+          <label class="timeline-event-icon"></label>
+          <div class="timeline-event-copy">
+            <p class="timeline-event-thumbnail">2025</p>
+            <h3>Generative Ai</h3>
+            <h4>Linkedin Learning</h4>
+            <p>Completed LinkedIn Learning's Generative AI course, earning a professional certificate from Microsoft.
+              Gained hands-on knowledge of AI fundamentals, AI-powered search, and productivity tools like Microsoft
+              Copilot.</p>
+          </div>
+        </li>
+        <li class="timeline-event">
+          <label class="timeline-event-icon"></label>
+          <div class="timeline-event-copy">
+            <p class="timeline-event-thumbnail">2025</p>
+            <h3>AI Infrastructure and Operations Fundamentals</h3>
+            <h4>Nvidia</h4>
+            <p>Achieved NVIDIA's "AI Infrastructure and Operations Fundamentals," gaining insights into AI data center
+              hardware, full-stack architecture, and the MLOps principles required for model deployment.</p>
+          </div>
+        </li>
+        <li class="timeline-event">
+          <label class="timeline-event-icon"></label>
+          <div class="timeline-event-copy">
+            <p class="timeline-event-thumbnail">2025</p>
+            <h3>ChatGpt for Data Analyst</h3>
+            <h4>Maven Analytics</h4>
+            <p>Achieved Maven Analytics' Data Analytics with ChatGPT certification, gaining virtual experience in data
+              analysis, visualization, and problem-solving with AI-powered tools.</p>
+          </div>
+        </li>
+      </ul>
+
+      <button class="more-button"
+        onclick="window.open('https://www.linkedin.com/in/karun-binny/details/certifications/', '_blank')">
+        <span>SEE MORE</span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+
+  <section id="projects">
+    <h1 class="title">PROJECTS</h1>
+    <div class="project-card-container">
+
+      <!-- CARD 1 -->
+
+      <div class="project-card"
+        style="background-image: url('./assets/pbg.png'); background-size: cover; background-position: center;">
+        <div class="project-card-header">
+          <h2>TEXT TO SPEEECH<br /></h2>
+        </div>
+        <div class="project-card-overlay">
+          <p class="project-description">
+            Speech Synthesis Tool.
+          </p>
+          <div class="project-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+        <div class="project-card-footer">
+          <button class="project-icon-btn"
+            onclick="window.open('https://lykanranger.github.io/text-to-speech/', '_blank')">▶</button>
+          <button class="project-icon-btn"
+            onclick="window.open('https://github.com/lykanranger/text-to-speech', '_blank')">&lt;/&gt;</button>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="project-card"
+        style="background-image: url('./assets/pbg.png'); background-size: cover; background-position: center;">
+        <div class="project-card-header">
+          <h2>BUSSEAT<br /></h2>
+        </div>
+        <div class="project-card-overlay">
+          <p class="project-description">
+            Bus seat reservation app.
+          </p>
+          <div class="project-stack">
+            <span>React</span>
+            <span>Vite</span>
+            <span>Superbase</span>
+          </div>
+        </div>
+        <div class="project-card-footer">
+          <button class="project-icon-btn" onclick="window.open('https://busseat.vercel.app/', '_blank')">▶</button>
+          <button class="project-icon-btn"
+            onclick="window.open('https://github.com/lykanranger/busseat', '_blank')">&lt;/&gt;</button>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="project-card"
+        style="background-image: url('./assets/pbg.png'); background-size: cover; background-position: center;">
+        <div class="project-card-header">
+          <h2>NETFLIX<br /></h2>
+        </div>
+        <div class="project-card-overlay">
+          <p class="project-description">
+            NETFLIX clone app.
+          </p>
+          <div class="project-stack">
+            <span>React</span>
+            <span>Vite</span>
+            <span>API</span>
+          </div>
+        </div>
+        <div class="project-card-footer">
+          <button class="project-icon-btn"
+            onclick="window.open('https://netflix-miniproject.vercel.app/', '_blank')">▶</button>
+          <button class="project-icon-btn"
+            onclick="window.open('https://github.com/lykanranger/Netflix')">&lt;/&gt;</button>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="project-card"
+        style="background-image: url('./assets/pbg.png'); background-size: cover; background-position: center;">
+        <div class="project-card-header">
+          <h2>HOLYSMOKES<br /></h2>
+        </div>
+        <div class="project-card-overlay">
+          <p class="project-description">
+            Food ordering app.
+          </p>
+          <div class="project-stack">
+            <span>React</span>
+            <span>Vite</span>
+            <span>Superbase</span>
+          </div>
+        </div>
+        <div class="project-card-footer">
+          <button class="project-icon-btn"
+            onclick="window.open('https://holysmokes-two.vercel.app/', '_blank')">▶</button>
+          <button class="project-icon-btn"
+            onclick="window.open('https://github.com/lykanranger/holysmokes')">&lt;/&gt;</button>
+        </div>
+      </div>
+    </div>
+    <p class="view-on-github">
+      <button class="more-button" onclick="window.open('https://github.com/lykanranger', '_blank')">
+        <span>SEE MORE</span>
+      </button>
+    </p>
+  </section>
+
+  <!-- Services -->
+
+  <section id="services" class="services-section">
+    <h2 class="title">SERVICES</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=11240&format=png&color=FFFFFF"
+          alt="Web Designing Icon" />
+        <p>Web Designing</p>
+      </div>
+      <div class="service-card">
+        <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=53388&format=png&color=FFFFFF"
+          alt="Email Marketing Icon" />
+        <p>Email Marketing</p>
+      </div>
+      <div class="service-card">
+        <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=2916&format=png&color=FFFFFF"
+          alt="Photo Editing Icon" />
+        <p>Photo Editing</p>
+      </div>
+      <div class="service-card">
+        <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=11737&format=png&color=FFFFFF"
+          alt="Content Writing Icon" />
+        <p>Content Writing</p>
+      </div>
+      <div class="service-card">
+        <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=299&format=png&color=FFFFFF"
+          alt="Documentation Icon" />
+        <p>Documentation</p>
+      </div>
+      <div class="service-card">
+        <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=VQxO1tmK8Lvf&format=png&color=FFFFFF"
+          alt="Website Maintenance Icon" />
+        <p>Website Maintenance</p>
+      </div>
+      <div class="service-card">
+        <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=3614&format=png&color=FFFFFF"
+          alt="PPT Designing Icon" />
+        <p>PPT Designing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+
+  <section id="contact">
+    <h1 class="know-more-title">CONTACT</h1>
+    <div class="container">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header-button close"></div>
+            <div class="screen-header-button maximize"></div>
+            <div class="screen-header-button minimize"></div>
+          </div>
+        </div>
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            <div class="app-contact">
+              <a href="tel:+9179944938">
+                <i class="fa fa-phone"></i>+91 7994 4938
+              </a><br><br>
+              <a href="mailto:karunbinny867@gmail.com">
+                <i class="fa fa-envelope"></i>karunbinny867@gmail.com
+              </a><br><br>
+              <a href="https://maps.app.goo.gl/Do844ynxW6GUBg4W7">
+                <i class="fa fa-map-marker"></i>Kottayam Kerala India
+              </a>
+            </div>
+          </div>
+          <div class="screen-body-item">
+            <form class="app-form" action="https://formspree.io/f/myzjawqw" method="post">
+              <div class="app-form-group">
+                <input class="app-form-control" type="text" name="name" placeholder="NAME">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" type="email" name="email" placeholder="EMAIL">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" type="text" name="contact" placeholder="CONTACT NO">
+              </div>
+              <div class="app-form-group message">
+                <textarea class="app-form-control" name="message" placeholder="MESSAGE"></textarea>
+              </div>
+              <div class="app-form-group buttons">
+                <button class="app-form-button" type="reset">CANCEL</button>
+                <button class="app-form-button" type="submit">SEND</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer id="footer">
+
+    <article id="footer-lights">
+      <ul class="footer-socials">
+        <li><a href="https://www.facebook.com/karun.binny.9" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.twitter.com/karun_binny/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/karun-binny" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://www.instagram.com/karunbinny/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://github.com/lykanranger" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://wa.me/7994444938" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+      </ul>
+    </article>
+
+    <p class="footer-credits">
+      <span class="creator">
+        Created by <strong>KARUN</strong>
+        <span class="slashes">
           <span>/</span><span>/</span><span>/</span>
         </span>
-      </div>
-    </section>
+      </span>
+      <br>
+      © 2023 - <span id="year"></span>
+      <span class="separator"> | </span>
+      All Rights Reserved
+    </p>
 
-     <!-- Education -->
+  </footer>
 
-    <section id="education">
-      <div class="education-container">
-        <h1 class="title">EDUCATION</h1>
-        <div class="cards-wrapper">
-              <!-- MCA Card -->
-              <article class="card card-mca">
-                <div class="thumb-mca"></div>
-                <div class="infos-mca">
-                  <h2 class="title-mca">MASTER'S DEGREE <span class="flag"></span></h2>
-                  <h3 class="mca">Mahatma Gandhi University</h3>
-                  <h3 class="stat">MCA (2024 - Present)</h3>
-                </div>
-              </article>
+  <!-- Back to top button -->
 
-              <!-- BCA Card -->
-              <article class="card card-bca">
-                <div class="thumb-bca"></div>
-                <div class="infos-bca">
-                  <h2 class="title-bca">BACHELOR'S DEGREE <span class="flag"></span></h2>
-                  <h3 class="bca">Mahatma Gandhi University</h3>
-                  <h3 class="stat"> BCA (2021 - 2024)</h3>
-                </div>
-              </article>
+  <button class="back2top">
+    <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px"
+      fill="#000000">
+      <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"></path>
+    </svg>
+  </button>
 
-              <!-- CSE Card -->
-              <article class="card card-cse">
-                <div class="thumb-cse"></div>
-                <div class="infos-cse">
-                  <h2 class="title-cse">HIGHER SECONDARY<span class="flag"></span></h2>
-                  <h3 class="cse">KERALA STATE BOARD</h3>
-                  <h3 class="stat">CSE (2019 - 2021)</h3>
-                </div>
-              </article>
-      </section>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-     <!-- Skills -->
-
-    <section id="skills">
-      <h1 class="title">SKILLS</h1>
-      <div class="logos">
-        <div class="logos-slide">
-          <div class="logo-popup"><img src="./logos/html.png" alt="html"><span class="popup-text">HTML</span></div>
-          <div class="logo-popup"><img src="./logos/excel.png" alt="excel"><span class="popup-text">Ms Excel</span></div>
-          <div class="logo-popup"><img src="./logos/python.png" alt="python"><span class="popup-text">Python</span></div>
-          <div class="logo-popup"><img src="./logos/java.png" alt="java"><span class="popup-text">Java</span></div>
-          <div class="logo-popup"><img src="./logos/C.png" alt="c"><span class="popup-text">C</span></div>
-          <div class="logo-popup"><img src="./logos/snapseed.png" alt="snapseed"><span class="popup-text">Snapseed</span></div>
-          <div class="logo-popup"><img src="./logos/creativecloud.png" alt="creativecloud"><span class="popup-text">Adobe Creative</span></div>
-          <div class="logo-popup"><img src="./logos/11.png" alt="11"><span class="popup-text">Windows 11</span></div>
-          <div class="logo-popup"><img src="./logos/apple.png" alt="apple"><span class="popup-text">Mac OS</span></div>
-          <div class="logo-popup"><img src="./logos/linux.png" alt="linux"><span class="popup-text">Linux</span></div>
-          <div class="logo-popup"><img src="./logos/tailwind.png" alt="tailwind"><span class="popup-text">Tailwind CSS</span></div>
-          <div class="logo-popup"><img src="./logos/adobe.png" alt="adobe"><span class="popup-text">Illustrator</span></div>
-          <div class="logo-popup"><img src="./logos/css.png" alt="css"><span class="popup-text">CSS</span></div>
-          <div class="logo-popup"><img src="./logos/pycharm.png" alt="pycharm"><span class="popup-text">PyCharm</span></div>
-          <div class="logo-popup"><img src="./logos/access.png" alt="access"><span class="popup-text">Ms Access</span></div>
-          <div class="logo-popup"><img src="./logos/word.png" alt="word"><span class="popup-text">Ms Word</span></div>
-          <div class="logo-popup"><img src="./logos/chatgpt.png" alt="chatgpt"><span class="popup-text">Chatgpt</span></div>
-          <div class="logo-popup"><img src="./logos/figma.png" alt="figma"><span class="popup-text">Figma</span></div>
-          <div class="logo-popup"><img src="./logos/photoshop.png" alt="photoshop"><span class="popup-text">Photoshop</span></div>
-          <div class="logo-popup"><img src="./logos/php.png" alt="php"><span class="popup-text">php</span></div>
-          <div class="logo-popup"><img src="./logos/microsoft.png" alt="microsoft"><span class="popup-text">Microsoft</span></div>
-          <div class="logo-popup"><img src="./logos/ai.png" alt="ai"><span class="popup-text">Ai</span></div>
-          <div class="logo-popup"><img src="./logos/ppt.png" alt="ppt"><span class="popup-text">Powerpoint</span></div>
-          <div class="logo-popup"><img src="./logos/C++.png" alt="c++"><span class="popup-text">C++</span></div>
-          <div class="logo-popup"><img src="./logos/react.png" alt="figma"><span class="popup-text">React</span></div>
-          <div class="logo-popup"><img src="./logos/Nodejs.png" alt="figma"><span class="popup-text">Node js</span></div>
-          <div class="logo-popup"><img src="./logos/github.png" alt="github"><span class="popup-text">Github</span></div>
-          <div class="logo-popup"><img src="./logos/js.png" alt="js"><span class="popup-text">JavaScript</span></div>
-          <div class="logo-popup"><img src="./logos/mysql.png" alt="mysql"><span class="popup-text">MySQL</span></div>
-          <div class="logo-popup"><img src="./logos/git.png" alt="git"><span class="popup-text">Git</span></div>
-          <div class="logo-popup"><img src="./logos/typescript.png" alt="typescript"><span class="popup-text">Typescript</span></div>
-          <div class="logo-popup"><img src="./logos/lightroom.png" alt="lightroom"><span class="popup-text">Lightroom</span></div>
-          <div class="logo-popup"><img src="./logos/mongodb.png" alt="mongodb"><span class="popup-text">Mongodb</span></div>
-          <div class="logo-popup"><img src="./logos/Canva.png" alt="Canva"><span class="popup-text">Canva</span></div>
-          <div class="logo-popup"><img src="./logos/office.png" alt="office"><span class="popup-text">Ms Office</span></div>
-          <div class="logo-popup"><img src="./logos/vscode.png" alt="vscode"><span class="popup-text">Visual Studio</span></div>
-          <div class="logo-popup"><img src="./logos/bootstrap.png" alt="bootstrap"><span class="popup-text">Bootstrap</span></div>
-          <div class="logo-popup"><img src="./logos/gemini.png" alt="gemini"><span class="popup-text">Gemini Ai</span></div>
-        </div>
-      </div>
-    </section>
-    <p class="subtitle">*** Tools & technologies that I have worked with ***</p>
-
-     <!-- Certificates -->
-
-    <section class="cert-section" id="certifications">
-     <h1 class="title">CERTIFICATIONS</h1>
-      <div class="cert-container">        
-        <ul class="timeline">      
-          <li class="timeline-event">
-            <label class="timeline-event-icon"></label>
-            <div class="timeline-event-copy">
-              <p class="timeline-event-thumbnail">2025</p>
-              <h3>Gemini Certified University Student</h3>
-              <h4>Google</h4>
-              <p>Completed Google's Gemini certification, validating proficiency in generative AI concepts, effective prompt engineering, and the responsible application of AI tools for academic and technical projects.</p>
-            </div>
-          </li>   
-          <li class="timeline-event">
-            <label class="timeline-event-icon"></label>
-            <div class="timeline-event-copy">
-              <p class="timeline-event-thumbnail">2025</p>
-              <h3>Generative Ai</h3>
-              <h4>Linkedin Learning</h4>
-              <p>Completed LinkedIn Learning's Generative AI course, earning a professional certificate from Microsoft. Gained hands-on knowledge of AI fundamentals, AI-powered search, and productivity tools like Microsoft Copilot.</p>
-            </div>
-          </li>
-          <li class="timeline-event">
-            <label class="timeline-event-icon"></label>
-            <div class="timeline-event-copy">
-              <p class="timeline-event-thumbnail">2025</p>
-              <h3>AI Infrastructure and Operations Fundamentals</h3>
-              <h4>Nvidia</h4>
-              <p>Achieved NVIDIA's "AI Infrastructure and Operations Fundamentals," gaining insights into AI data center hardware, full-stack architecture, and the MLOps principles required for model deployment.</p>
-            </div>
-          </li>
-          <li class="timeline-event">
-            <label class="timeline-event-icon"></label>
-            <div class="timeline-event-copy">
-              <p class="timeline-event-thumbnail">2025</p>
-              <h3>ChatGpt for Data Analyst</h3>
-              <h4>Maven Analytics</h4>
-              <p>Achieved Maven Analytics' Data Analytics with ChatGPT certification, gaining virtual experience in data analysis, visualization, and problem-solving with AI-powered tools.</p>
-            </div>
-          </li>
-        </ul>
-
-        <button class="more-button" onclick="window.open('https://www.linkedin.com/in/karun-binny/details/certifications/', '_blank')">
-          <span>SEE MORE</span>
-        </button>
-      
-      </div>
-    </section>
-
-     <!-- Projects -->
-
-    <section id="projects"> 
-      <h1 class="title">PROJECTS</h1>
-        <div class="project-card-container">
-          
-          <!-- CARD 1 -->
-
-          <div class="project-card" style="background-image: url('./assets/pbg.png'); background-size: cover; background-position: center;">
-            <div class="project-card-header">
-              <h2>TEXT TO SPEEECH<br /></h2>
-            </div>
-            <div class="project-card-overlay">
-              <p class="project-description">
-                Speech Synthesis Tool.
-              </p>
-              <div class="project-stack">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-            </div>
-            <div class="project-card-footer">
-              <button class="project-icon-btn" onclick="window.open('https://lykanranger.github.io/text-to-speech/', '_blank')">▶</button>
-              <button class="project-icon-btn" onclick="window.open('https://github.com/lykanranger/text-to-speech', '_blank')">&lt;/&gt;</button>
-            </div>
-          </div>
-
-          <!-- CARD 2 -->
-
-          <div class="project-card" style="background-image: url('./assets/pbg.png'); background-size: cover; background-position: center;">
-            <div class="project-card-header">
-              <h2>BUSSEAT<br /></h2>
-            </div>
-            <div class="project-card-overlay">
-              <p class="project-description">
-                Bus seat reservation app.
-              </p>
-              <div class="project-stack">
-                <span>React</span>
-                <span>Vite</span>
-                <span>Superbase</span>
-              </div>
-            </div>
-            <div class="project-card-footer">
-              <button class="project-icon-btn" onclick="window.open('https://busseat.vercel.app/', '_blank')">▶</button>
-              <button class="project-icon-btn" onclick="window.open('https://github.com/lykanranger/busseat', '_blank')">&lt;/&gt;</button>
-            </div>
-          </div>
-
-          <!-- CARD 3 -->
-
-          <div class="project-card" style="background-image: url('./assets/pbg.png'); background-size: cover; background-position: center;">
-            <div class="project-card-header">
-              <h2>NETFLIX<br /></h2>
-            </div>
-            <div class="project-card-overlay">
-              <p class="project-description">
-                NETFLIX clone app.
-              </p>
-              <div class="project-stack">
-                <span>React</span>
-                <span>Vite</span>
-                <span>API</span>
-              </div>
-            </div>
-            <div class="project-card-footer">
-              <button class="project-icon-btn" onclick="window.open('https://netflix-miniproject.vercel.app/', '_blank')">▶</button>
-              <button class="project-icon-btn" onclick="window.open('https://github.com/lykanranger/Netflix')">&lt;/&gt;</button>
-            </div>
-          </div>
-
-          <!-- CARD 4 -->
-
-          <div class="project-card" style="background-image: url('./assets/pbg.png'); background-size: cover; background-position: center;">
-            <div class="project-card-header">
-              <h2>HOLYSMOKES<br /></h2>
-            </div>
-            <div class="project-card-overlay">
-              <p class="project-description">
-                Food ordering app.
-              </p>
-              <div class="project-stack">
-                <span>React</span>
-                <span>Vite</span>
-                <span>Superbase</span>
-              </div>
-            </div>
-            <div class="project-card-footer">
-              <button class="project-icon-btn" onclick="window.open('https://holysmokes-two.vercel.app/', '_blank')">▶</button>
-              <button class="project-icon-btn" onclick="window.open('https://github.com/lykanranger/holysmokes')">&lt;/&gt;</button>
-            </div>
-          </div>  
-        </div>
-          <p class="view-on-github">
-            <button
-              class="more-button"
-              onclick="window.open('https://github.com/lykanranger', '_blank')">
-              <span>SEE MORE</span>
-            </button>
-          </p>
-    </section>
-
-      <!-- Services -->
-
-    <section id="services" class="services-section">
-      <h2 class="title">SERVICES</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=11240&format=png&color=FFFFFF" alt="Web Designing Icon" />
-          <p>Web Designing</p>
-        </div>
-        <div class="service-card">
-          <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=53388&format=png&color=FFFFFF" alt="Email Marketing Icon" />
-          <p>Email Marketing</p>
-        </div>
-        <div class="service-card">
-          <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=2916&format=png&color=FFFFFF" alt="Photo Editing Icon" />
-          <p>Photo Editing</p>
-        </div>
-        <div class="service-card">
-          <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=11737&format=png&color=FFFFFF" alt="Content Writing Icon" />
-          <p>Content Writing</p>
-        </div>
-        <div class="service-card">
-          <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=299&format=png&color=FFFFFF" alt="Documentation Icon" />
-          <p>Documentation</p>
-        </div>
-        <div class="service-card">
-          <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=VQxO1tmK8Lvf&format=png&color=FFFFFF" alt="Website Maintenance Icon" />
-          <p>Website Maintenance</p>
-        </div>
-        <div class="service-card">
-          <img class="service-icon-img" src="https://img.icons8.com/?size=100&id=3614&format=png&color=FFFFFF" alt="PPT Designing Icon" />
-          <p>PPT Designing</p>
-        </div>
-      </div>
-    </section>
-
-     <!-- Contact -->
-    
-    <section id="contact">
-      <h1 class="know-more-title">CONTACT</h1>
-      <div class="container">
-        <div class="screen">
-          <div class="screen-header">
-            <div class="screen-header-left">
-              <div class="screen-header-button close"></div>
-              <div class="screen-header-button maximize"></div>
-              <div class="screen-header-button minimize"></div>
-            </div>
-          </div>
-          <div class="screen-body">
-            <div class="screen-body-item left">
-              <div class="app-contact">
-                <a href="tel:+9179944938">
-                  <i class="fa fa-phone"></i>+91 7994 4938
-                </a><br><br>
-                <a href="mailto:karunbinny867@gmail.com">
-                  <i class="fa fa-envelope"></i>karunbinny867@gmail.com
-                </a><br><br>
-                <a href="https://maps.app.goo.gl/Do844ynxW6GUBg4W7">
-                  <i class="fa fa-map-marker"></i>Kottayam Kerala India
-                </a>
-              </div>
-            </div>
-            <div class="screen-body-item">
-              <form class="app-form" action="https://formspree.io/f/myzjawqw" method="post">
-                <div class="app-form-group">
-                  <input class="app-form-control" type="text" name="name" placeholder="NAME">
-                </div>
-                <div class="app-form-group">
-                  <input class="app-form-control" type="email" name="email" placeholder="EMAIL">
-                </div>
-                <div class="app-form-group">
-                  <input class="app-form-control" type="text" name="contact" placeholder="CONTACT NO">
-                </div>
-                <div class="app-form-group message">
-                  <textarea class="app-form-control" name="message" placeholder="MESSAGE"></textarea>
-                </div>
-                <div class="app-form-group buttons">
-                  <button class="app-form-button" type="reset">CANCEL</button>
-                  <button class="app-form-button" type="submit">SEND</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-     <!-- Footer -->
-
-    <footer id="footer">
-
-      <article id="footer-lights">
-        <ul class="footer-socials">
-          <li><a href="https://www.facebook.com/karun.binny.9" target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://www.twitter.com/karun_binny/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/karun-binny" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="https://www.instagram.com/karunbinny/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://github.com/lykanranger" target="_blank"><i class="fa fa-github"></i></a></li>
-          <li><a href="https://wa.me/7994444938" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
-        </ul>
-      </article>
-
-      <p class="footer-credits">
-        <span class="creator">
-          Created by <strong>KARUN</strong>
-          <span class="slashes">
-            <span>/</span><span>/</span><span>/</span>
-          </span>
-        </span>
-        <br>
-        © 2023 - <span id="year"></span>
-        <span class="separator"> | </span>
-        All Rights Reserved
-      </p>
-
-    </footer>
-
-      <!-- Back to top button -->
-
-    <button class="back2top">
-      <svg
-        class="svg"
-        xmlns="http://www.w3.org/2000/svg"
-        height="25px"
-        viewBox="0 -960 960 960"
-        width="25px"
-        fill="#000000"
-      >
-        <path
-          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-        ></path>
-      </svg>
-    </button>
-
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-  </body>
+</body>
 
 </html>

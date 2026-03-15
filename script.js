@@ -3,60 +3,62 @@
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
+  const blur = document.querySelector(".blur-overlay");
+
   menu.classList.toggle("open");
   icon.classList.toggle("open");
+  blur.classList.toggle("open");
+
   document.body.classList.toggle("stop-scrolling");
 }
 
-// TYPEING
+// DARK MODE
 
-const typingText = document.getElementById("typing-text");
 
-const names = [
-  "KARUN BINNY",
-  "卡伦·宾尼",
-  "كارون بيني",
-  "카룬 비니"
-];
+function initThemeToggle() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const sunIcon = document.getElementById('sun-icon');
+  const moonIcon = document.getElementById('moon-icon');
 
-let nameIndex = 0;
-let charIndex = 0;
+  if (!themeToggle) return;
 
-function typeText() {
-  if (nameIndex === 0) {
-    typingText.style.fontWeight = "300";
-  } else {
-    typingText.style.fontWeight = "600";
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'light') {
+    document.body.classList.add('light-theme');
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'block';
   }
 
-  let currentName = names[nameIndex];
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
 
-  if (charIndex < currentName.length) {
-    typingText.innerHTML += currentName[charIndex];
-    charIndex++;
-    setTimeout(typeText, 150);
-  } else {
-    setTimeout(() => {
-      typingText.innerHTML = "";
-      charIndex = 0;
-      nameIndex++;
-      if (nameIndex >= names.length) {
-        nameIndex = 0;
-      }
-      typeText();
-    }, 1000);
-  }
+    const isLight = document.body.classList.contains('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+
+    if (isLight) {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    } else {
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+    }
+
+  });
 }
 
-typeText();
+// PARTICLE EFFECT
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  initThemeToggle();
+});
 
 // ABOUT ME
 
 document.addEventListener("DOMContentLoaded", function () {
 
   // LOADING ANIMATION
-  
+
   const loadingContainer = document.querySelector('.loading-container');
   if (loadingContainer) {
     setTimeout(() => {
@@ -125,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('scroll', onScroll, { passive: true });
 
 
-  // --- 2. STICKY TEXT ---
+  // --- STICKY TEXT ---
 
   const revealElement = document.getElementById('reveal-text');
   const scrollContainer = document.querySelector('#about');

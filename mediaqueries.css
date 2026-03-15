@@ -2,34 +2,33 @@
 
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 85vh;
-    margin-bottom: 6rem;
+    height: 80vh;
   }
+
   #education {
     height: fit-content;
-  }  
+  }
 }
-
 
 /* --- Tablets & Small Laptops --- */
 
 @media screen and (max-width: 1200px) {
+
   nav {
-      margin-left: 2rem;
-      margin-right: 2rem;
-    }
-  #profile {
-    display: block;
+    padding: 0 2rem;
   }
+
   section {
     height: fit-content;
     margin: 0;
   }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+
+  #skills {
+    min-height: 10vh;
+    justify-content: flex-start;
+    padding-bottom: 5rem;
   }
+
   #education {
     height: fit-content;
   }
@@ -38,36 +37,39 @@
 /* --- Nest Hub, Zenbook & Landscape Tablets --- */
 
 @media screen and (max-width: 1024px) {
-  .section__pic-container {
-    width: 200px;
-    height: 200px;
+  #profile {
+    height: auto;
+    min-height: 90vh;
   }
+
   .project-card-container {
     gap: 1.5rem;
     padding-left: 2rem;
     padding-right: 2rem;
     width: 100%;
   }
+
   .menu-links li {
     margin-top: 1.2rem;
   }
-  #projects {
-    padding-bottom: 4rem;
-  }
+
+
   .cards-wrapper {
     padding-left: 2rem;
     padding-right: 2rem;
-    gap: 3rem; 
+    gap: 3rem;
     width: 100%;
   }
+
   .education-container {
     width: 100%;
     padding: 0;
   }
+
   .back2top {
     bottom: 50px;
     right: 50px;
-  }  
+  }
 }
 
 /* --- Medium Screens --- */
@@ -75,84 +77,135 @@
 @media (max-width: 900px) {
   .project-card {
     width: 100%;
-    max-width: 400px; 
+    max-width: 400px;
     width: 295px;
   }
+
+  .nav-links,
+  nav>.btn {
+    display: none;
+  }
+
+  .menu-links .btn {
+    margin-left: 12px;
+  }
+
+  .hamburger-menu {
+    display: block;
+    margin-left: initial;
+  }
+
+  .hamburger-icon {
+    width: 32px;
+    height: 24px;
+  }
+
+  .menu-links {
+    width: 40vw;
+  }
+
+  .theme-switch-wrapper {
+    margin-left: auto;
+    margin-right: 1.5rem;
+  }
+
 }
 
 /* --- Small Tablets & Large Phones --- */
 
 @media (max-width: 768px) {
-  .more-button {
-    top: calc(100% + 5px);
+  #profile {
+    display: flex;
+    height: 90vh;
   }
-  .cert-container {
-    margin-top: 5rem;
+
+  .hero-img {
+    width: 60vw;
+    height: 60vw;
+    max-width: 400px;
+    max-height: 400px;
   }
-  .ticker-item {
-      padding: 0 1.5rem;
+
+  .float-left,
+  .float-right {
+    position: absolute;
+    bottom: -4rem;
+    margin: 0;
+    top: auto;
+    transform: none;
   }
+
+  .float-left {
+    left: -2rem;
+  }
+
+  .float-right {
+    right: -2rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+
+
+  .ticker-item{
+    padding: 0 3rem;
+  }
+
   .ticker-item::after {
-      right: -0.5rem;
-      font-size: 0.8em;
+    right: -0.5rem;
+    font-size: 0.8em;
   }
+
   .back2top {
     bottom: 40px;
     right: 30px;
-  }  
+  }
 }
 
 /* --- Mobile Devices --- */
 
 @media screen and (max-width: 600px) {
   #profile {
-    height: 80vh;
-    height: 80dvh;
+    height: 90vh;
+    height: 90dvh;
     margin-bottom: 0;
-    margin-top: 3rem;
   }
-  .scroll-chevron {
-    bottom: 80px;
+
+  .menu-links {
+    width: 85vw;
+    height: 100dvh;
+    border-radius: 0;
+    padding-left: 2.5rem;
   }
+
   article {
     font-size: 1rem;
   }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .section__pic-container {
-    width: 46vw;
-    height: 46vw;
-    justify-content: center;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
+
   .title {
     font-size: 2rem;
   }
-  .subtitle {
-    font-size: 0.8rem;
-  }
+
   #typing-text {
     font-size: 2rem;
     min-height: 3rem;
   }
-  .about-slashes {
-    bottom: 70px;
-    font-size: 1.4rem;
-    letter-spacing: 4px;
-    opacity: 0.7;
-    animation-duration: 8s;
-  }
+
   #education {
     min-height: auto;
-    padding-bottom: 3rem;
+    padding-bottom: 8rem;
   }
+
   .cards-wrapper {
     padding-top: 0;
     gap: 2rem;
-  }  
+  }
+
   #education .title,
   #skills .title,
   #projects .title,
@@ -161,37 +214,52 @@
     margin-bottom: 2rem;
     font-size: 2.5rem;
   }
+
   .project-card-container {
     row-gap: 4rem;
-  }  
+  }
+
   .services-section {
     padding: 1rem;
   }
+
   .screen-body-item.left {
     display: flex;
     margin: 0 !important;
     flex-direction: column;
     align-items: center;
   }
-  .screen-body-item.left > * {
+
+  .screen-body-item.left>* {
     margin: 0;
   }
+
   #contact .app-contact {
     display: none;
   }
+
+  .contact-resume-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-self: center;
+  }
+
   .ticker-item {
     padding: 0 1.5rem;
   }
+
   .ticker-item::after {
     right: -0.5rem;
     font-size: 0.8em;
   }
+
   .footer-credits {
     font-size: 1rem;
   }
+
   .footer-socials a {
     font-size: 20px;
-  }    
+  }
 }
 
 /* --- Small Mobile --- */
@@ -200,12 +268,15 @@
   #contact .screen-body {
     flex-direction: column;
   }
+
   #contact .screen-body-item.left {
     margin-bottom: 30px;
   }
+
   .footer-credits {
     font-size: 0.6rem;
   }
+
   .back2top {
     height: 32px;
     width: 32px;
@@ -213,7 +284,8 @@
     bottom: 20px;
     right: 12px;
   }
+
   .footer-socials {
     gap: 1.7rem;
-  }         
+  }
 }
