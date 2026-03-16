@@ -211,6 +211,7 @@
   #projects .title,
   .services-section .title,
   .cert-section .title {
+    padding-top: 3rem;
     margin-bottom: 2rem;
     font-size: 2.5rem;
   }
