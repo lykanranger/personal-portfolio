@@ -361,15 +361,16 @@ body.light-theme #theme-toggle:hover {
 
 .menu-links {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 80px;
+  right: 25px;
   width: 25vw;
-  height: 100vh;
+  height: auto;
   background-color: var(--nav-bg);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 100px;
+  padding-top: 20px;
+  padding-bottom: 2rem;
   padding-left: 2rem;
   opacity: 0;
   pointer-events: none;
@@ -388,45 +389,15 @@ body.light-theme #theme-toggle:hover {
 }
 
 .menu-links a {
-  display: block;
-  width: max-content;
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--subtext-color);
-  text-decoration: none;
-  text-align: left;
-  transition: var(--transition);
-  position: relative;
-  padding-left: 0;
-}
-
-.menu-links a::before {
-  content: "";
-  position: absolute;
-  left: -1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 3px;
-  height: 0;
-  background-color: rgb(255, 0, 0);
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-}
-
-.menu-links a:hover,
-.menu-links a.active-link {
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 2px;
   color: var(--text-color);
-  padding-left: 0.5rem;
-}
-
-.menu-links a:hover::before,
-.menu-links a.active-link::before {
-  height: 1.5rem;
-  opacity: 1;
+  text-decoration: none;
 }
 
 .hamburger-icon.open span {
-  background-color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 .hamburger-icon.open span:first-child {
@@ -472,12 +443,19 @@ body.light-theme #theme-toggle:hover {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
+
   40% {
     transform: translateX(-50%) translateY(-10px);
   }
+
   60% {
     transform: translateX(-50%) translateY(-5px);
   }
@@ -607,60 +585,60 @@ body.light-theme .hero-logo-dark {
 }
 
 .ticker-scroll-track {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .ticker-sticky-wrapper {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .ticker-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .ticker-progress {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: transparent;
-    transform: scaleX(0);
-    transform-origin: left;
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 10;
 }
 
 .ticker-move {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding-left: 2vw; 
-    padding-right: 3vw; 
-    will-change: transform;
-    width: max-content;
-    box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 2vw;
+  padding-right: 3vw;
+  will-change: transform;
+  width: max-content;
+  box-sizing: content-box;
 }
 
 .ticker-item {
-    flex-shrink: 0;
-    padding: 0 3vw;
-    font-size: clamp(3rem, 7.5vw, 12rem);
-    text-transform: uppercase;
-    line-height: 1;
-    white-space: nowrap;
-    position: relative;
+  flex-shrink: 0;
+  padding: 0 3vw;
+  font-size: clamp(3rem, 7.5vw, 12rem);
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  position: relative;
 }
 
 .ticker-gray {
