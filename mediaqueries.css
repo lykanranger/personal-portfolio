@@ -38,8 +38,8 @@
 
 @media screen and (max-width: 1024px) {
   #profile {
-    min-height: 100dvh;
     height: auto;
+    min-height: 90vh;
   }
 
   .project-card-container {
@@ -171,9 +171,8 @@
 
 @media screen and (max-width: 600px) {
   #profile {
-    height: 90vh;
-    height: 90dvh;
-    margin-bottom: 0;
+    min-height: 100dvh;
+    height: auto;
   }
 
   .menu-links {
