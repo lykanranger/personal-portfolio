@@ -38,8 +38,8 @@
 
 @media screen and (max-width: 1024px) {
   #profile {
+    min-height: 100dvh;
     height: auto;
-    min-height: 90vh;
   }
 
   .project-card-container {
