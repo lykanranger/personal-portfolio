@@ -173,6 +173,15 @@
   #profile {
     min-height: 100dvh;
     height: auto;
+    padding-bottom: 8rem;
+  }
+
+  .hero-container {
+    margin-top: -3rem;
+  }
+
+  .scroll-indicator {
+    bottom: 7rem;
   }
 
   .menu-links {
