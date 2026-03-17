@@ -13,7 +13,7 @@
   --btn-hover-text: #000;
   --btn-hover-border: #fff;
   --loader-bg: #000;
-  --overlay-bg: rgba(255, 255, 255);
+  --overlay-bg: rgba(0, 0, 0);
   --transition: all 0.3s ease;
 }
 
@@ -28,7 +28,7 @@ body.light-theme {
   --btn-hover-bg: #000;
   --btn-hover-text: #fff;
   --btn-hover-border: #000;
-  --overlay-bg: rgba(0, 0, 0);
+  --overlay-bg: rgba(255, 255, 255);
 }
 
 * {
@@ -363,15 +363,21 @@ body.light-theme #theme-toggle:hover {
   position: fixed;
   top: 80px;
   right: 25px;
+
   width: 25vw;
   height: auto;
-  background-color: var(--nav-bg);
+
+  background-color: var(--text-color);
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
   padding-top: 20px;
   padding-bottom: 2rem;
+
   padding-left: 2rem;
+
   opacity: 0;
   pointer-events: none;
   transition: var(--transition);
@@ -392,12 +398,12 @@ body.light-theme #theme-toggle:hover {
   font-size: 1.6rem;
   font-weight: 300;
   letter-spacing: 2px;
-  color: var(--text-color);
+  color: var(--nav-bg);
   text-decoration: none;
 }
 
 .hamburger-icon.open span {
-  background-color: var(--bg-color);
+  background-color: var(--text-color);
 }
 
 .hamburger-icon.open span:first-child {
