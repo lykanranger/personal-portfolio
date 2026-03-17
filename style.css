@@ -6,7 +6,7 @@
   --subtext-color: gray;
   --accent-color: red;
   --nav-bg: #000;
-  --btn-bg: transparent;
+  --btn-bg: #000;
   --btn-border: #fff;
   --btn-text: #fff;
   --btn-hover-bg: #fff;
@@ -22,7 +22,7 @@ body.light-theme {
   --text-color: #000;
   --subtext-color: #555;
   --nav-bg: #fff;
-  --btn-bg: transparent;
+  --btn-bg: #fff;
   --btn-border: #000;
   --btn-text: #000;
   --btn-hover-bg: #000;
@@ -74,12 +74,11 @@ a,
   transition: var(--transition);
 }
 
-/* RESUME BUTTON */
+/* RESUME & CONTACT BUTTON */
 
 .btn {
   font-weight: 300;
   padding: 0.8rem 2rem;
-  transform: skewX(20deg);
   display: inline-block;
   background: none;
   cursor: pointer;
@@ -87,7 +86,6 @@ a,
 
 .btn span {
   display: inline-block;
-  transform: skewX(-20deg);
 }
 
 .btn-color-1 {
@@ -332,7 +330,7 @@ body.light-theme #theme-toggle:hover {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background: red;
+  background: var(--text-color);
   transition: width 0.3s ease;
 }
 
@@ -480,6 +478,38 @@ body.light-theme #theme-toggle:hover {
   overflow: hidden;
   background: var(--bg-color);
 }
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 15;
+  animation: bounce 2s infinite;
+  transition: var(--transition);
+}
+
+.scroll-indicator:hover {
+  color: var(--accent-color);
+  transform: translateX(-50%) scale(1.2);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+
 
 .hero {
   position: relative;
@@ -1164,6 +1194,19 @@ body.light-theme .logos:after {
   left: 0;
   right: 0;
   opacity: 1;
+}
+
+body:not(.light-theme) .more-button {
+  background: rgb(255, 255, 255);
+  color: #000000;
+}
+
+body:not(.light-theme) .more-button::before {
+  background: #000000;
+}
+
+body:not(.light-theme) .more-button:hover {
+  color: #ffffff;
 }
 
 /* PROJECTS SECTION */

@@ -46,9 +46,6 @@ function initThemeToggle() {
   });
 }
 
-// PARTICLE EFFECT
-
-
 document.addEventListener("DOMContentLoaded", () => {
   initThemeToggle();
 });
@@ -66,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
   }
 
-  // --- 1. HORIZONTAL SCROLL ---
+  // --- HORIZONTAL SCROLL ---
 
   const track = document.querySelector('.ticker-scroll-track');
   const scroller = document.querySelector('.ticker-move');
