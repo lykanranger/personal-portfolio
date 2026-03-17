@@ -74,32 +74,6 @@ a,
   transition: var(--transition);
 }
 
-/* RESUME & CONTACT BUTTON */
-
-.btn {
-  font-weight: 300;
-  padding: 0.8rem 2rem;
-  display: inline-block;
-  background: none;
-  cursor: pointer;
-}
-
-.btn span {
-  display: inline-block;
-}
-
-.btn-color-1 {
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  border: var(--btn-border) 0.1rem solid;
-}
-
-.btn-color-1:hover {
-  background: var(--btn-hover-bg);
-  color: var(--btn-hover-text);
-  border: var(--btn-hover-border) 0.1rem solid;
-}
-
 /* LOADER */
 
 .loading-container {
@@ -220,7 +194,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 10dvh;
   background-color: var(--nav-bg);
   padding: 0 5rem;
   transition: var(--transition);
@@ -470,7 +444,7 @@ body.light-theme #theme-toggle:hover {
 /* HERO SECTION */
 
 #profile {
-  height: 90vh;
+  height: 90dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -592,6 +566,32 @@ body.light-theme .hero-logo-light {
 
 body.light-theme .hero-logo-dark {
   display: none;
+}
+
+/* RESUME & CONTACT BUTTON */
+
+.btn {
+  font-weight: 300;
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  background: none;
+  cursor: pointer;
+}
+
+.btn span {
+  display: inline-block;
+}
+
+.btn-color-1 {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: var(--btn-border) 0.1rem solid;
+}
+
+.btn-color-1:hover {
+  background: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+  border: var(--btn-hover-border) 0.1rem solid;
 }
 
 
