@@ -350,7 +350,7 @@ body.light-theme #theme-toggle:hover {
   background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(0px);
   pointer-events: none;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.1s ease-in-out;
   z-index: 150;
 }
 
@@ -363,21 +363,15 @@ body.light-theme #theme-toggle:hover {
   position: fixed;
   top: 80px;
   right: 25px;
-
   width: 25vw;
   height: auto;
-
   background-color: var(--text-color);
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   padding-top: 20px;
   padding-bottom: 2rem;
-
   padding-left: 2rem;
-
   opacity: 0;
   pointer-events: none;
   transition: var(--transition);
@@ -837,6 +831,7 @@ body.light-theme .card {
 .stat {
   display: inline-block;
   opacity: 0;
+  font-weight: 300;
   transition: all 0.5s ease-in-out 0.25s;
 }
 
