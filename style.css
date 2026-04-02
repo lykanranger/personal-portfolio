@@ -423,7 +423,7 @@ body.light-theme #theme-toggle:hover {
 }
 
 .scroll-indicator:hover {
-  color: var(--accent-color);
+  color: var(--subtext-color);
   transform: translateX(-50%) scale(1.2);
 }
 
@@ -446,66 +446,49 @@ body.light-theme #theme-toggle:hover {
   }
 }
 
-
-
 .hero {
   position: relative;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-
-.float-left,
-.float-right {
-  position: absolute;
-  top: 100%;
-  transform: translateY(-50%);
-  white-space: nowrap;
-  z-index: 10;
-}
-
-.float-left {
-  left: -20px;
-}
-
-.float-right {
-  right: -20px;
-}
-
-
-/* HERO LAYOUT */
-
-.hero-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* AVATAR */
-
-.hero {
-  position: relative;
+  gap: 6rem;
   z-index: 5;
 }
 
-.hero-img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
+.hero-left-content {
+  flex-shrink: 0;
 }
 
-.hero-center-content {
+.hero-right-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  align-items: flex-start;
+  gap: .5rem;
+}
+
+.hero-logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2rem;
+}
+
+.hero-btn-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hero-img {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hero-logo {
-  height: 60px;
+  height: 70px;
   width: auto;
 }
 
@@ -1032,7 +1015,7 @@ body.light-theme .logos:after {
 }
 
 .more-button {
-  background: #fff;
+  background: #b3b3b3;
   padding: 10px 20px;
   display: inline-block;
   font-size: 15px;
@@ -1044,6 +1027,8 @@ body.light-theme .logos:after {
   position: absolute;
   left: 50%;
   top: calc(100% + 5px);
+  color: #000;
+  border: none;
 }
 
 .more-button span {
@@ -1075,19 +1060,6 @@ body.light-theme .logos:after {
   opacity: 1;
 }
 
-body:not(.light-theme) .more-button {
-  background: rgb(255, 255, 255);
-  color: #000000;
-}
-
-body:not(.light-theme) .more-button::before {
-  background: #000000;
-}
-
-body:not(.light-theme) .more-button:hover {
-  color: #ffffff;
-}
-
 /* PROJECTS SECTION */
 
 #projects {
@@ -1098,7 +1070,7 @@ body:not(.light-theme) .more-button:hover {
   justify-content: flex-start;
   padding: 0 2rem 80px;
   margin: 0;
-  background-color: var(--bg-color);
+  background-color: #fff;
   position: relative;
   z-index: 10;
 }
@@ -1107,6 +1079,7 @@ body:not(.light-theme) .more-button:hover {
   padding-top: 3rem;
   font-size: 3rem;
   margin: 0 0 7rem;
+  color: #000;
 }
 
 .project-card-container {
