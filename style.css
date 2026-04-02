@@ -291,25 +291,10 @@ body.light-theme #theme-toggle:hover {
 .nav-links a {
   text-decoration: none;
   color: var(--subtext-color);
-  font-weight: 300;
-  font-size: 1.5rem;
+  font-weight: 200;
+  font-size: 1.4rem;
   position: relative;
   transition: var(--transition);
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background: var(--text-color);
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
 }
 
 .nav-links a:hover {
@@ -365,7 +350,7 @@ body.light-theme #theme-toggle:hover {
   right: 25px;
   width: 25vw;
   height: auto;
-  background-color: var(--text-color);
+  background-color: var(--nav-bg);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -392,7 +377,7 @@ body.light-theme #theme-toggle:hover {
   font-size: 1.6rem;
   font-weight: 300;
   letter-spacing: 2px;
-  color: var(--nav-bg);
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -574,94 +559,6 @@ body.light-theme .hero-logo-dark {
 
 
 /* ABOUT SECTION */
-
-#ticker-section {
-  position: relative;
-  background-color: var(--bg-color);
-  width: 100%;
-  z-index: 1;
-  min-height: 100vh;
-  min-height: 100dvh;
-}
-
-.ticker-scroll-track {
-  position: relative;
-  width: 100%;
-}
-
-.ticker-sticky-wrapper {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-.ticker-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.ticker-progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: transparent;
-  transform: scaleX(0);
-  transform-origin: left;
-  z-index: 10;
-}
-
-.ticker-move {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding-left: 2vw;
-  padding-right: 3vw;
-  will-change: transform;
-  width: max-content;
-  box-sizing: content-box;
-}
-
-.ticker-item {
-  flex-shrink: 0;
-  padding: 0 3vw;
-  font-size: clamp(3rem, 7.5vw, 12rem);
-  text-transform: uppercase;
-  line-height: 1;
-  white-space: nowrap;
-  position: relative;
-}
-
-.ticker-gray {
-  color: #c3c3c3;
-}
-
-.ticker-item::after {
-  content: " > ";
-  position: absolute;
-  right: -1vw;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #838383;
-  -webkit-text-stroke: 0;
-  -webkit-text-fill-color: #838383;
-  font-size: 0.5em;
-}
-
-.ticker-item:last-child::after {
-  display: none;
-}
-
-/* --- STICKY TEXT --- */
 
 #about {
   background-color: var(--bg-color);
@@ -1013,6 +910,9 @@ body.light-theme .logos:after {
   align-items: center;
   flex-shrink: 0;
   animation: 35s slide infinite linear;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 .logos-slide img {

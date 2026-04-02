@@ -63,67 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
   }
 
-  // --- HORIZONTAL SCROLL ---
-
-  const track = document.querySelector('.ticker-scroll-track');
-  const scroller = document.querySelector('.ticker-move');
-  const progressBar = document.querySelector('.ticker-progress');
-
-  let currentScrollX = 0;
-  let targetScrollX = 0;
-  let maxTranslate = 0;
-  let animationFrameId;
-
-  const lerp = (start, end, factor) => start + (end - start) * factor;
-
-  function initTicker() {
-    if (!track || !scroller) return;
-
-    const contentWidth = scroller.scrollWidth;
-    const viewportWidth = window.innerWidth;
-
-    maxTranslate = Math.max(0, contentWidth - viewportWidth);
-
-    track.style.height = maxTranslate > 0
-      ? `${maxTranslate + window.innerHeight}px`
-      : '100vh';
-  }
-
-  function animateTicker() {
-    currentScrollX = lerp(currentScrollX, targetScrollX, 0.08);
-    currentScrollX = Math.max(0, Math.min(currentScrollX, maxTranslate));
-
-    scroller.style.transform = `translateX(-${currentScrollX}px)`;
-
-    if (progressBar && maxTranslate > 0) {
-      progressBar.style.transform =
-        `scaleX(${currentScrollX / maxTranslate})`;
-    }
-
-    if (Math.abs(targetScrollX - currentScrollX) > 0.5) {
-      animationFrameId = requestAnimationFrame(animateTicker);
-    }
-  }
-
-  function onScroll() {
-    if (!track) return;
-
-    const rect = track.getBoundingClientRect();
-    const scrollDistance = Math.max(0, -rect.top);
-
-    targetScrollX = Math.min(scrollDistance, maxTranslate);
-
-    cancelAnimationFrame(animationFrameId);
-    animationFrameId = requestAnimationFrame(animateTicker);
-  }
-
-  initTicker();
-
-  window.addEventListener('load', initTicker);
-  window.addEventListener('resize', initTicker);
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-
   // --- STICKY TEXT ---
 
   const revealElement = document.getElementById('reveal-text');
