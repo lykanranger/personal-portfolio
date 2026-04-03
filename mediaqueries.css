@@ -148,7 +148,6 @@
     margin-bottom: 2rem;
   }
 
-
   .back2top {
     bottom: 40px;
     right: 30px;
@@ -268,6 +267,10 @@
 
   .footer-credits {
     font-size: 0.6rem;
+  }
+
+  .footer-logo {
+    height: 1.8rem;
   }
 
   .back2top {

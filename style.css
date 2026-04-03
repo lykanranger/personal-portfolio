@@ -1652,6 +1652,17 @@ body.light-theme .service-card:hover {
   font-weight: 900;
 }
 
+.footer-logo {
+  height: 2rem;
+  width: auto;
+  display: inline-block !important;
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 2px;
+  position: relative;
+  top: -2px;
+}
+
 .back2top {
   height: 40px;
   width: 40px;
