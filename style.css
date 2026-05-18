@@ -400,13 +400,14 @@ body.light-theme #theme-toggle:hover {
 /* HERO SECTION */
 
 #profile {
-  height: 90dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  background: var(--bg-color);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+    background: var(--bg-color);
+    padding: 2rem 0;
 }
 
 .scroll-indicator {
