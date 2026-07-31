@@ -374,8 +374,8 @@ body.light-theme #theme-toggle:hover {
 }
 
 .menu-links a {
-  font-size: 1.6rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 200;
   letter-spacing: 2px;
   color: var(--text-color);
   text-decoration: none;
@@ -671,7 +671,7 @@ body.light-theme #about h1 {
   margin: 1rem;
   width: 320px;
   max-width: calc(100% - 2rem);
-  height: 380px;
+  height: 342px;
   border-radius: 25px;
   overflow: hidden;
   border: 1px solid gray;
@@ -702,7 +702,7 @@ body.light-theme .card {
 }
 
 .infos-mca {
-  height: 350px;
+  height: 150px;
   padding: 10px 24px;
   background: #000;
   transition: all .5s ease-in-out 0.15s;
@@ -731,7 +731,7 @@ body.light-theme .card {
 }
 
 .infos-bca {
-  height: 350px;
+  height: 150px;
   padding: 10px 24px;
   background: #000;
   transition: all 0.4s ease-in-out 0.15s;
@@ -760,7 +760,7 @@ body.light-theme .card {
 }
 
 .infos-cse {
-  height: 350px;
+  height: 150px;
   padding: 10px 24px;
   background: #000;
   transition: all 0.4s ease-in-out 0.15s;
@@ -1054,7 +1054,7 @@ body.light-theme .logos:after {
   left: 50%;
   top: calc(100% + 5px);
   color: #000;
-  border: none;
+  border: 1px solid var(--btn-border);
 }
 
 .more-button span {
@@ -1121,7 +1121,7 @@ body.light-theme .logos:after {
 }
 
 .project-card {
-  width: 295px;
+  width: 300px;
   max-width: calc(100% - 2rem);
   aspect-ratio: 1 / 1;
   background: url('./assets/project_bg.jpg') center/cover no-repeat;
@@ -1192,11 +1192,11 @@ body.light-theme .logos:after {
   bottom: 0;
   background: transparent;
   color: white;
-  padding: 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 0.8rem;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -1210,7 +1210,7 @@ body.light-theme .logos:after {
 .project-description {
   background: white;
   color: black;
-  padding: 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 10px;
   font-size: 0.9rem;
   text-align: left;
@@ -1222,7 +1222,7 @@ body.light-theme .logos:after {
 .project-stack {
   background: black;
   color: white;
-  padding: 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 10px;
   text-align: left;
   transform: translateX(100%);
@@ -1827,8 +1827,6 @@ body.light-theme .slashes span:nth-child(3) {
   fill: var(--bg-color);
   transform: scale(1.2);
 }
-<<<<<<< HEAD
-
 .title::before,
 .know-more-title::before {
   content: '- ';
@@ -1840,5 +1838,3 @@ body.light-theme .slashes span:nth-child(3) {
   content: ' -';
   color: gray;
 }
-=======
->>>>>>> e7c563ac4870c7eb8a24822e3dfd32756dc96d3e

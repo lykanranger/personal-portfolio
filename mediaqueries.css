@@ -76,10 +76,9 @@
 
 @media (max-width: 900px) {
   .project-card {
-    width: 100%;
-    max-width: 400px;
-    width: 295px;
-  }
+     width: 100%;
+     max-width: 390px;
+   }
 
   .nav-links,
   nav>.btn {
@@ -101,7 +100,81 @@
   }
 
   .menu-links {
-    width: 40vw;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: none;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-links li {
+    display: block;
+    width: 220px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 0;
+    transform: skew(-21deg);
+    margin: 0.6rem 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: var(--transition);
+  }
+
+  .menu-links li:hover {
+    background-color: #000;
+    border-color: #fff;
+  }
+
+  .menu-links a {
+    display: block;
+    transform: skew(21deg);
+    color: #000;
+    font-weight: 400;
+    font-size: 1.3rem;
+    transition: var(--transition);
+  }
+
+  .menu-links li:hover a {
+    color: #fff;
+  }
+
+  body.light-theme .menu-links li {
+    background-color: #e0e0e0;
+    border-color: #000;
+  }
+
+  body.light-theme .menu-links li:hover {
+    background-color: #000;
+    border-color: #000;
+  }
+
+  body.light-theme .menu-links li:hover a {
+    color: #fff;
+  }
+
+  .menu-logo-container {
+    background: transparent !important;
+    border: none !important;
+    cursor: default !important;
+    transform: none !important;
+    margin-top: 3.5rem !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .menu-logo {
+    height: 40px;
+    width: auto;
   }
 
   .theme-switch-wrapper {
@@ -182,10 +255,8 @@
   }
 
   .menu-links {
-    width: 85vw;
-    height: auto;
-    border-radius: 0;
-    padding-left: 2.5rem;
+    width: auto;
+    background: transparent;
   }
 
   article {
@@ -215,7 +286,8 @@
   #skills .title,
   #projects .title,
   .services-section .title,
-  .experience-section .title {
+  .experience-section .title,
+  .know-more-title {
     padding-top: 3rem;
     margin-bottom: 3rem;
     font-size: 2.5rem;
