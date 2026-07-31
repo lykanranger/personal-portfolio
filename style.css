@@ -400,13 +400,14 @@ body.light-theme #theme-toggle:hover {
 /* HERO SECTION */
 
 #profile {
-  height: 90dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  background: var(--bg-color);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+    background: var(--bg-color);
+    padding: 2rem 0;
 }
 
 .scroll-indicator {
@@ -1826,6 +1827,7 @@ body.light-theme .slashes span:nth-child(3) {
   fill: var(--bg-color);
   transform: scale(1.2);
 }
+<<<<<<< HEAD
 
 .title::before,
 .know-more-title::before {
@@ -1838,3 +1840,5 @@ body.light-theme .slashes span:nth-child(3) {
   content: ' -';
   color: gray;
 }
+=======
+>>>>>>> e7c563ac4870c7eb8a24822e3dfd32756dc96d3e
