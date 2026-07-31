@@ -463,15 +463,14 @@ body.light-theme #theme-toggle:hover {
 .hero-right-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: .5rem;
 }
 
 .hero-logo-box {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-left: 2rem;
+  align-items: center;
 }
 
 .hero-btn-group {
@@ -494,7 +493,24 @@ body.light-theme #theme-toggle:hover {
 
 @media screen and (min-width: 769px) {
   .hero-logo {
-    margin-bottom: 3rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--subtext-color);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+  .hero-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -653,8 +669,9 @@ body.light-theme #about h1 {
 .card {
   margin: 1rem;
   width: 320px;
-  height: 350px;
-  border-radius: 50px 0 50px 0;
+  max-width: calc(100% - 2rem);
+  height: 380px;
+  border-radius: 25px;
   overflow: hidden;
   border: 1px solid gray;
   position: relative;
@@ -679,139 +696,146 @@ body.light-theme .card {
 }
 
 .thumb-mca {
-  height: 260px;
+  height: 68%;
   background: url('./assets/mca.jpeg') center/cover no-repeat;
 }
 
 .infos-mca {
   height: 350px;
   padding: 10px 24px;
-  background: #fff;
+  background: #000;
   transition: all .5s ease-in-out 0.15s;
   position: relative;
 }
 
 .title-mca {
   margin: 5px 0;
-  color: #000;
+  color: #fff;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
 }
 
-.mca,
-.stat {
+.mca {
   margin-bottom: 5px;
   text-transform: uppercase;
   font-size: 0.80rem;
-  color: rgba(26, 26, 26, 0.7);
-}
-
-.stat {
-  display: inline-block;
-  opacity: 0;
-  font-weight: 300;
-  transition: all 0.5s ease-in-out 0.25s;
-}
-
-.card-mca:hover .infos-mca {
-  transform: translateY(-25px);
-}
-
-.card-mca:hover .stat,
-.card-mca:hover {
-  opacity: 1;
+  color: #888;
 }
 
 .thumb-bca {
-  height: 260px;
+  height: 68%;
   background: url('./assets/bca.jpeg') center/cover no-repeat;
 }
 
 .infos-bca {
   height: 350px;
   padding: 10px 24px;
-  background: #fff;
+  background: #000;
   transition: all 0.4s ease-in-out 0.15s;
   position: relative;
 }
 
 .title-bca {
   margin: 5px 0;
-  color: #000;
+  color: #fff;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
 }
 
-.bca,
-.stat {
+.bca {
   margin-bottom: 5px;
   text-transform: uppercase;
   font-size: 0.80rem;
-  color: rgba(26, 26, 26, 0.7);
-}
-
-.stat {
-  display: inline-block;
-  opacity: 0;
-  transition: all 0.5s ease-in-out 0.25s;
-}
-
-.card-bca:hover .infos-bca {
-  transform: translateY(-25px);
-}
-
-.card-bca:hover .stat,
-.card-bca:hover {
-  opacity: 1;
+  color: #888;
 }
 
 .thumb-cse {
-  height: 260px;
+  height: 68%;
   background: url('./assets/cse.jpeg') center/cover no-repeat;
 }
 
 .infos-cse {
   height: 350px;
   padding: 10px 24px;
-  background: #fff;
+  background: #000;
   transition: all 0.4s ease-in-out 0.15s;
   position: relative;
 }
 
 .title-cse {
   margin: 5px 0;
-  color: #000;
+  color: #fff;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
 }
 
-.cse,
+.cse {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 0.80rem;
+  color: #888;
+}
+
 .stat {
   margin-bottom: 5px;
   text-transform: uppercase;
   font-size: 0.80rem;
-  color: rgba(26, 26, 26, 0.7);
-}
-
-.stat {
+  font-weight: lighter;
+  color: #888;
   display: inline-block;
   opacity: 0;
   transition: all 0.5s ease-in-out 0.25s;
 }
 
+.card-mca:hover .infos-mca,
+.card-bca:hover .infos-bca,
 .card-cse:hover .infos-cse {
   transform: translateY(-25px);
 }
 
-.card-cse:hover .stat,
-.card-cse:hover {
+.card-mca:hover .stat,
+.card-bca:hover .stat,
+.card-cse:hover .stat {
   opacity: 1;
+}
+
+.title-mca::after,
+.title-bca::after,
+.title-cse::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+  background: url('./assets/check.png') no-repeat center center;
+  background-size: contain;
+}
+
+/* Light Theme Overrides */
+body.light-theme .infos-mca,
+body.light-theme .infos-bca,
+body.light-theme .infos-cse {
+  background: #fff;
+}
+
+body.light-theme .title-mca,
+body.light-theme .title-bca,
+body.light-theme .title-cse {
+  color: #000;
+}
+
+body.light-theme .mca,
+body.light-theme .bca,
+body.light-theme .cse,
+body.light-theme .stat {
+  color: rgba(26, 26, 26, 0.7);
 }
 
 /* SKILLS */
@@ -830,6 +854,7 @@ body.light-theme .card {
 
 #skills .title {
   padding-top: 3rem;
+  margin-bottom: 3rem;
   font-size: 3rem;
   color: var(--text-color);
 }
@@ -911,9 +936,9 @@ body.light-theme .logos:after {
 }
 
 
-/* <!-- CERTIFICATIONS --> */
+/* <!-- EXPERIENCE --> */
 
-.cert-section {
+.experience-section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -922,14 +947,14 @@ body.light-theme .logos:after {
   background-color: var(--bg-color);
 }
 
-.cert-section .title {
+.experience-section .title {
   padding-top: 3rem;
   font-size: 3rem;
   color: var(--text-color);
   margin-bottom: 3rem;
 }
 
-.cert-container {
+.experience-container {
   width: 100%;
   margin-top: 2rem;
   display: flex;
@@ -1070,16 +1095,16 @@ body.light-theme .logos:after {
   justify-content: flex-start;
   padding: 0 2rem 80px;
   margin: 0;
-  background-color: #fff;
+  background-color: var(--bg-color);
   position: relative;
   z-index: 10;
 }
 
 #projects .title {
   padding-top: 3rem;
+  margin-bottom: 3rem;
   font-size: 3rem;
-  margin: 0 0 7rem;
-  color: #000;
+  color: var(--text-color);
 }
 
 .project-card-container {
@@ -1096,10 +1121,9 @@ body.light-theme .logos:after {
 
 .project-card {
   width: 295px;
-  height: 325px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  max-width: calc(100% - 2rem);
+  aspect-ratio: 1 / 1;
+  background: url('./assets/project_bg.jpg') center/cover no-repeat;
   border-radius: 12px;
   position: relative;
   overflow: hidden;
@@ -1108,11 +1132,13 @@ body.light-theme .logos:after {
   color: white;
   cursor: pointer;
   transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .project-card-header h2 {
   font-size: 2rem;
   font-weight: 700;
+  color: white;
 }
 
 .project-card-header {
@@ -1147,14 +1173,14 @@ body.light-theme .logos:after {
   font-size: 18px;
   line-height: 1;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .project-icon-btn:hover {
   background-color: white;
   color: black;
-  border-color: #ffffff;
+  border-color: white;
   transform: scale(1.1);
-  transition: all 0.3s ease;
 }
 
 .project-card-overlay {
@@ -1181,8 +1207,8 @@ body.light-theme .logos:after {
 }
 
 .project-description {
-  background: #ffffff;
-  color: #000000;
+  background: white;
+  color: black;
   padding: 1rem;
   border-radius: 10px;
   font-size: 0.9rem;
@@ -1193,7 +1219,8 @@ body.light-theme .logos:after {
 }
 
 .project-stack {
-  background: #000000;
+  background: black;
+  color: white;
   padding: 1rem;
   border-radius: 10px;
   text-align: left;
@@ -1303,10 +1330,11 @@ body.light-theme .service-card:hover {
 /* CONTACT */
 
 #contact {
-  background: #000000;
+  background: var(--bg-color);
   font-size: 12px;
   padding: 0;
   margin: 0;
+  transition: var(--transition);
 }
 
 #contact .container {
@@ -1324,6 +1352,12 @@ body.light-theme .service-card:hover {
   font-size: 3rem;
   color: white;
   padding-top: 5rem;
+  margin-bottom: 5rem;
+  transition: var(--transition);
+}
+
+body.light-theme .know-more-title {
+  color: black;
 }
 
 #contact .screen {
@@ -1333,6 +1367,7 @@ body.light-theme .service-card:hover {
   width: 90%;
   max-width: 600px;
   border: rgb(79, 79, 79) 2px solid;
+  transition: var(--transition);
 }
 
 #contact .screen:after {
@@ -1346,6 +1381,7 @@ body.light-theme .service-card:hover {
   border-radius: 15px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
   z-index: -1;
+  transition: var(--transition);
 }
 
 #contact .screen-header {
@@ -1354,6 +1390,7 @@ body.light-theme .service-card:hover {
   padding: 10px 20px;
   background: rgb(79, 79, 79);
   border-radius: 13px 13px 0 0;
+  transition: var(--transition);
 }
 
 #contact .screen-header-left {
@@ -1404,11 +1441,14 @@ body.light-theme .service-card:hover {
 }
 
 .app-contact a {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   color: #898989;
   font-size: 13px;
   position: relative;
   top: 50px;
+  transition: color 0.3s ease;
 }
 
 .app-contact a:hover {
@@ -1422,6 +1462,8 @@ body.light-theme .service-card:hover {
 }
 
 .app-contact i {
+  width: 20px;
+  text-align: center;
   margin-right: 10px;
 }
 
@@ -1449,7 +1491,7 @@ body.light-theme .service-card:hover {
   color: #ddd;
   font-size: 14px;
   outline: none;
-  transition: border-color .2s;
+  transition: border-color .2s, color .3s ease;
   font-family: inherit;
 }
 
@@ -1468,6 +1510,7 @@ body.light-theme .service-card:hover {
   font-size: 14px;
   cursor: pointer;
   outline: none;
+  transition: color 0.3s ease;
 }
 
 #contact .app-form-button[type="reset"]:hover {
@@ -1478,16 +1521,64 @@ body.light-theme .service-card:hover {
   color: rgb(255, 255, 255);
 }
 
+/* Light Theme Overrides for Contact Screen */
+body.light-theme #contact .screen {
+  background: #ffffff;
+  border-color: #000000;
+}
+
+body.light-theme #contact .screen-header {
+  background: #000000;
+}
+
+body.light-theme #contact .screen:after {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+}
+
+body.light-theme .app-contact a {
+  color: #555555;
+}
+
+body.light-theme .app-contact a:hover {
+  color: #000000;
+}
+
+body.light-theme #contact .app-form-control {
+  color: #000000;
+  border-bottom-color: #cccccc;
+}
+
+body.light-theme #contact .app-form-control::placeholder {
+  color: #777777;
+}
+
+body.light-theme #contact .app-form-control:focus {
+  border-bottom-color: #000000;
+}
+
+body.light-theme #contact .app-form-button {
+  color: #555555;
+}
+
+body.light-theme #contact .app-form-button[type="reset"]:hover {
+  color: #000000;
+}
+
+body.light-theme #contact .app-form-button[type="submit"]:hover {
+  color: #000000;
+}
+
 /*  Footer  */
 
 #footer {
   width: 100%;
   height: 25vh;
-  background: #000 !important;
+  background: var(--bg-color);
   position: relative;
   overflow: hidden;
   padding: 0;
   margin: 0;
+  transition: var(--transition);
 }
 
 .footer-socials {
@@ -1504,6 +1595,10 @@ body.light-theme .service-card:hover {
   font-size: 20px;
   color: gray;
   transition: color 0.3s ease;
+}
+
+body.light-theme .footer-socials a {
+  color: black;
 }
 
 .footer-socials li:nth-child(1):hover a {
@@ -1526,6 +1621,10 @@ body.light-theme .service-card:hover {
   color: #ffffff;
 }
 
+body.light-theme .footer-socials li:nth-child(5):hover a {
+  color: #000000;
+}
+
 .footer-socials li:nth-child(6):hover a {
   color: #00ff5e;
 }
@@ -1539,6 +1638,31 @@ body.light-theme .service-card:hover {
   font-size: 1rem;
   text-align: center;
   line-height: 1.6;
+  transition: var(--transition);
+}
+
+body.light-theme .footer-credits {
+  color: black;
+}
+
+.footer-logo.hero-logo-light {
+  display: none !important;
+}
+
+.footer-logo.hero-logo-dark {
+  display: inline-block !important;
+}
+
+body.light-theme .footer-logo.hero-logo-light {
+  display: inline-block !important;
+}
+
+body.light-theme .footer-logo.hero-logo-dark {
+  display: none !important;
+}
+
+body.light-theme .slashes span:nth-child(3) {
+  color: black;
 }
 
 .creator {
@@ -1669,8 +1793,8 @@ body.light-theme .service-card:hover {
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
-  background-color: black;
-  border: 2px solid gray;
+  background-color: var(--bg-color);
+  border: 2px solid var(--text-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1690,15 +1814,27 @@ body.light-theme .service-card:hover {
 
 .svg {
   transition: all 0.5s;
-  fill: gray;
+  fill: var(--text-color);
 }
 
 .back2top:hover {
-  background-color: #000;
-  border: 2px solid #fff;
+  background-color: var(--text-color);
+  border: 2px solid var(--bg-color);
 }
 
 .back2top:hover .svg {
-  fill: #fff;
+  fill: var(--bg-color);
   transform: scale(1.2);
+}
+
+.title::before,
+.know-more-title::before {
+  content: '- ';
+  color: gray;
+}
+
+.title::after,
+.know-more-title::after {
+  content: ' -';
+  color: gray;
 }
