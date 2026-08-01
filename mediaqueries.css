@@ -118,8 +118,8 @@
   .menu-links li {
     display: block;
     width: 220px;
-    background-color: #fff;
-    border: 2px solid #000;
+    background-color: #000;
+    border: 2px solid #fff;
     border-radius: 0;
     transform: skew(-21deg);
     margin: 0.6rem 0;
@@ -130,26 +130,30 @@
   }
 
   .menu-links li:hover {
-    background-color: #000;
-    border-color: #fff;
+    background-color: #fff;
+    border-color: #000;
   }
 
   .menu-links a {
     display: block;
     transform: skew(21deg);
-    color: #000;
+    color: #fff;
     font-weight: 400;
     font-size: 1.3rem;
     transition: var(--transition);
   }
 
   .menu-links li:hover a {
-    color: #fff;
+    color: #000;
   }
 
   body.light-theme .menu-links li {
     background-color: #e0e0e0;
     border-color: #000;
+  }
+
+  body.light-theme .menu-links a {
+    color: #000;
   }
 
   body.light-theme .menu-links li:hover {

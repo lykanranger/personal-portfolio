@@ -1021,6 +1021,32 @@ body.light-theme .logos:after {
   margin-bottom: 1.2em;
 }
 
+.experience-logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.2em;
+}
+
+.logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+}
+
+.exp-logo {
+  max-height: 100%;
+  max-width: 133px;
+  object-fit: contain;
+}
+
+.logo-divider {
+  font-size: 1.2em;
+  color: var(--text-color);
+  opacity: 0.3;
+}
+
 .timeline-event-copy strong {
   font-weight: 700;
 }
