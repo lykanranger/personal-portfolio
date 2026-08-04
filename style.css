@@ -819,7 +819,6 @@ body.light-theme .card {
   background-size: contain;
 }
 
-/* Light Theme Overrides */
 body.light-theme .infos-mca,
 body.light-theme .infos-bca,
 body.light-theme .infos-cse {
@@ -1160,6 +1159,11 @@ body.light-theme .logos:after {
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: 1.5px solid #fff;
+}
+
+body.light-theme .project-card {
+  border: none;
 }
 
 .project-card-header h2 {
@@ -1548,7 +1552,6 @@ body.light-theme .know-more-title {
   color: rgb(255, 255, 255);
 }
 
-/* Light Theme Overrides for Contact Screen */
 body.light-theme #contact .screen {
   background: #ffffff;
   border-color: #000000;

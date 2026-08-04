@@ -366,3 +366,19 @@
     gap: 1.7rem;
   }
 }
+
+/* --- Smaller Laptops (1025px - 1366px) --- */
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  #education .cards-wrapper {
+    padding-top: 0;
+  }
+
+  #projects .project-card {
+    width: 270px;
+  }
+
+  #services .services-grid {
+    margin-top: 0;
+  }
+}

@@ -14,7 +14,6 @@ function toggleMenu() {
 
 // DARK MODE
 
-
 function initThemeToggle() {
   const themeToggle = document.getElementById('theme-toggle');
   const sunIcon = document.getElementById('sun-icon');
