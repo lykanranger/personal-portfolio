@@ -378,6 +378,10 @@
     width: 270px;
   }
 
+  #projects .view-on-github {
+    margin-top: 2rem;
+  }
+
   #services .services-grid {
     margin-top: 0;
   }
