@@ -1342,21 +1342,10 @@ body.light-theme .project-card {
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.service-card:hover {
-  background: white;
-}
-
-.service-card:hover p {
-  color: #000;
-}
-
 .service-card:hover .service-icon-img {
-  filter: brightness(0);
+  transform: scale(1.1);
 }
 
-body.light-theme .service-card:hover {
-  border-color: #000;
-}
 
 /* CONTACT */
 

@@ -1,0 +1,7 @@
+User-agent: Googlebot-Image
+Disallow: /portfolio_favicon.png
+
+User-agent: *
+Allow: /
+
+Sitemap: https://karunbinny-portfolio.netlify.app/sitemap.xml
