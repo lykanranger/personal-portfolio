@@ -1,6 +1,3 @@
-User-agent: Googlebot-Image
-Disallow: /portfolio_favicon.png
-
 User-agent: *
 Allow: /
 
